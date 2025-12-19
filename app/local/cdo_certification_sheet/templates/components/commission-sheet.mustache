@@ -1,0 +1,36 @@
+<div>
+    <br>
+    <br>
+    <div class="row">{{#str}} tabs_agreement, local_cdo_certification_sheet {{/str}}</div>
+    <br>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">{{#str}} commission_sheet_user_full_name, local_cdo_certification_sheet {{/str}}</th>
+            <th scope="col">{{#str}} commission_sheet_activity, local_cdo_certification_sheet {{/str}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#items}}
+            <tr>
+                <td>{{full_name}}</td>
+                <td>
+                    {{#agreed}}
+                        {{agreed_message_yes}}
+                    {{/agreed}}
+                    {{^agreed}}
+                        {{#is_current}}
+                            <a href="#" class="commission-grade-sheet" data-sheet-guid="{{sheet_guid}}" data-user-id="{{user_id}}">
+                                {{#str}} commission_sheet_agreed, local_cdo_certification_sheet {{/str}}
+                            </a>
+                        {{/is_current}}
+                        {{^is_current}}
+                            {{agreed_message_no}}
+                        {{/is_current}}
+                    {{/agreed}}
+                </td>
+            </tr>
+        {{/items}}
+        </tbody>
+    </table>
+</div>

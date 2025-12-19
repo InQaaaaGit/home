@@ -1,0 +1,33 @@
+<h2>{{#str}}certificates_table_title, local_cdo_order_documents{{/str}}</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">{{#str}}name_column, local_cdo_order_documents{{/str}}</th>
+      <th scope="col">{{#str}}type_column, local_cdo_order_documents{{/str}}</th>
+      <th scope="col">{{#str}}status_column, local_cdo_order_documents{{/str}}</th>
+      <th scope="col">{{#str}}comment_column, local_cdo_order_documents{{/str}}</th>
+      {{#show_download_column}}
+      <th scope="col">{{#str}}action_column, local_cdo_order_documents{{/str}}</th>
+      {{/show_download_column}}
+    </tr>
+  </thead>
+  <tbody>
+  {{#data}}
+    <tr>
+      <th scope="row">{{name}}</th>
+      <td>{{type}}</td>
+      <td>{{status}}</td>
+      <td>{{comment}}</td>
+      {{#show_download_column}}
+      <td>
+        {{#id}}
+        <a href="{{download_url}}?id_trainingcertificate={{id}}" class="btn btn-primary btn-sm">
+          {{#str}}download, local_cdo_order_documents{{/str}}
+        </a>
+        {{/id}}
+      </td>
+      {{/show_download_column}}
+    </tr>
+    {{/data}}
+  </tbody>
+</table>

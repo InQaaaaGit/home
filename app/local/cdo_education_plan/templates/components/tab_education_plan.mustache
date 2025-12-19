@@ -1,0 +1,28 @@
+<div class="row mt-2">
+    <div class="col-12">
+        <ul class="nav nav-tabs nav-justified" id="academic_progress_semesters" role="tablist">
+            {{#CurriculumEntries}}
+                <li class="nav-item" role="presentation">
+                    <a
+                            class="nav-link {{active}}"
+                            id="{{period.number}}-tab"
+                            data-toggle="tab"
+                            href="#nav-{{period.number}}" role="tab"
+                            aria-controls="{{period.number}}"
+                            aria-selected="true">
+                        {{period.name}}
+                    </a>
+                </li>
+            {{/CurriculumEntries}}
+        </ul>
+
+        <div class="tab-content w-100" id="nav_tab_content_academic_progress_semesters">
+            {{#CurriculumEntries}}
+                <div class="tab-pane fade {{show}} {{active}}" id="nav-{{period.number}}" role="tabpanel"
+                     aria-labelledby="ap{{period.number}}">
+                    {{> local_cdo_education_plan/components/table_education_plan}}
+                </div>
+            {{/CurriculumEntries}}
+        </div>
+    </div>
+</div>

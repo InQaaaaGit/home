@@ -1,0 +1,30 @@
+<table class="table table-striped mt-20">
+    <thead>
+    <th scope="col">
+        {{#str}} title, local_cdo_debts {{/str}}
+    </th>
+    <!--<th scope="col" class="text-center">
+        {{#str}} date_take, local_cdo_debts {{/str}}
+    </th>-->
+    <th scope="col" class="text-center">
+        {{#str}} date_return_plan, local_cdo_debts {{/str}}
+    </th>
+    <!--<th scope="col" class="text-center">
+        {{#str}} date_return_fact, local_cdo_debts {{/str}}
+    </th>
+    <th scope="col" class="text-center">
+        {{#str}} expired_text, local_cdo_debts {{/str}}
+    </th>-->
+    </thead>
+    <tbody>
+    {{#library_debts}}
+        <tr >
+            <td>{{title}}</td>
+           <!-- <td class="text-center">{{date_take}}</td>-->
+            <td style="color: #0a78d1" class="text-center ">{{date_return_plan}}</td>
+            <!--<td style="color: #8e662e" class="text-center">{{date_return_fact}}</td>
+            <td class="text-center">{{expired_text}}</td>-->
+        </tr>
+    {{/library_debts}}
+    </tbody>
+</table>

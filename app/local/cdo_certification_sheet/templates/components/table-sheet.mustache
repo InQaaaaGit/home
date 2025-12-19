@@ -1,0 +1,20 @@
+<table class="table" data-sheet-guid="{{sheet_guid}}" id="table-{{sheet_guid}}">
+    <thead>
+    <tr>
+        <th scope="col">{{#str}} table_sheet_user_full_name, local_cdo_certification_sheet {{/str}}</th>
+        <th scope="col">{{#str}} table_sheet_grade_book, local_cdo_certification_sheet {{/str}}</th>
+        <th scope="col">{{#str}} table_sheet_grade, local_cdo_certification_sheet {{/str}}</th>
+        <th scope="col">{{#str}} table_sheet_teacher_grade, local_cdo_certification_sheet {{/str}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#students}}
+        <tr data-student-guid="{{guid}}">
+            <td>{{full_name}}</td>
+            <td>{{grade_book}}</td>
+            <td>{{{student_system_grades}}}</td>
+            <td>{{teacher_full_name}}</td>
+        </tr>
+    {{/students}}
+    </tbody>
+</table>

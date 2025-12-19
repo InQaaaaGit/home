@@ -1,0 +1,23 @@
+{{!
+    vim: et ts=2 sts=2 sw=2 syntax=mustache
+    @template: local_cdo_unti2035bas/facts_control
+
+    Control widget for facts
+}}
+<fieldset class="facts_control" {{!
+  }}data-uniqid="{{uniqid}}" {{!
+  }}data-table="{{tableid}}"{{!
+  }}data-factdefid="{{factdefid}}"{{!
+  }}disabled>
+  <select name="student" class="custom-select">
+    {{#students}}
+    <option value="{{actoruntiid}}"{{#selected}} selected{{/selected}}>{{fullname}}</option>
+    {{/students}}
+  </select>
+  <button class="btn btn-primary create-fact">{{#str}} factcreate, local_cdo_unti2035bas {{/str}}</button>
+</fieldset>
+{{#js}}
+require(['local_cdo_unti2035bas/facts_control'], function(CTL) {
+  new CTL("{{uniqid}}", "{{tableid}}");
+});
+{{/js}}

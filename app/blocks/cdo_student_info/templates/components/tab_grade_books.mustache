@@ -1,0 +1,24 @@
+<ul class="nav nav-tabs nav-justified" id="student_info_list" role="tablist">
+    {{#student_record_books}}
+        <li class="nav-item" role="presentation">
+            <a
+                    class="nav-link {{active}}"
+                    id="{{id}}-tab"
+                    data-toggle="tab"
+                    href="#nav-{{id}}" role="tab"
+                    aria-controls="{{id}}"
+                    aria-selected="true">
+                {{#str}} grade_book_name, block_cdo_student_info {{/str}}: {{name}}
+            </a>
+        </li>
+    {{/student_record_books}}
+</ul>
+
+<div class="tab-content" id="nav-tab_content_student_info">
+    {{#student_record_books}}
+        <div class="tab-pane fade {{show}} {{active}}" id="nav-{{id}}" role="tabpanel"
+             aria-labelledby="gb{{id}}">
+            {{> block_cdo_student_info/components/table_grade_book_info}}
+        </div>
+    {{/student_record_books}}
+</div>

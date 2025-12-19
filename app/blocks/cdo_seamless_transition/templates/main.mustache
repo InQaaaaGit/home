@@ -1,0 +1,17 @@
+{{#is_error}}
+    {{{error_html}}}
+{{/is_error}}
+{{^is_error}}
+    <div class="d-flex flex-column justify-content-start">
+        {{#items}}
+            <button type="button"
+                    class="btn btn-link p-2 text-left link-to-external-service"
+                    data-service="{{external_data.ajax_method}}"
+                    data-transition-code="{{external_data.transition_code}}"
+                    data-transition-params="{{external_data.transition_params_json}}"
+            >
+                {{name}}
+            </button>
+        {{/items}}
+    </div>
+{{/is_error}}

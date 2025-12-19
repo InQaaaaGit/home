@@ -1,0 +1,34 @@
+.modal-dialog.modal-md.modal-dialog-centered {
+    padding: 0!important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+
+.modal-header, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 {
+    padding: 1rem 1rem !important;
+    margin: 0 !important;
+    text-align: initial !important;
+}
+
+.modal-header h3, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 h3, .modal-header h4, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 h4, .modal-header h5, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 h5 {
+    padding: 0 !important;
+}
+
+.moodle-dialogue-base .close, .moodle-dialogue-base .yui3-button.closebutton, .moodle-dialogue .close, .moodle-dialogue .yui3-button.closebutton, .modal-dialog .close, .moodle-dialogue-base .moodle-dialogue-wrap .close, .moodle-dialogue-base .moodle-dialogue-wrap .yui3-button.closebutton, .modal-dialog .yui3-button.closebutton, .moodle-dialogue-hd .close, .moodle-dialogue-hd .yui3-button.closebutton, .modal-header .close, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 .close, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 .yui3-button.closebutton, .modal-header .yui3-button.closebutton, .moodle-dialogue-base .closebutton, .moodle-dialogue .closebutton, .modal-dialog .closebutton, .moodle-dialogue-base .moodle-dialogue-wrap .closebutton, .moodle-dialogue-hd .closebutton, .modal-header .closebutton, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 .closebutton {
+    position: static!important;
+    width: auto!important;
+    height: auto!important;
+}
+
+.close, .yui3-button.closebutton {
+    background-image: none!important;
+}
+
+.moodle-dialogue-base .form-inline .form-control, .moodle-dialogue-base .form-inline .comment-area textarea, .comment-area .moodle-dialogue-base .form-inline textarea, .moodle-dialogue .form-inline .form-control, .moodle-dialogue .form-inline .comment-area textarea, .comment-area .moodle-dialogue .form-inline textarea, .modal-dialog .form-inline .form-control, .moodle-dialogue-base .moodle-dialogue-wrap .form-inline .form-control, .moodle-dialogue-base .moodle-dialogue-wrap .form-inline .comment-area textarea, .comment-area .moodle-dialogue-base .moodle-dialogue-wrap .form-inline textarea, .modal-dialog .form-inline .comment-area textarea, .comment-area .modal-dialog .form-inline textarea, .moodle-dialogue-hd .form-inline .form-control, .moodle-dialogue-hd .form-inline .comment-area textarea, .comment-area .moodle-dialogue-hd .form-inline textarea, .modal-header .form-inline .form-control, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 .form-inline .form-control, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 .form-inline .comment-area textarea, .comment-area .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 .form-inline textarea, .modal-header .form-inline .comment-area textarea, .comment-area .modal-header .form-inline textarea, .moodle-dialogue-base .mform .form-inline .form-control, .moodle-dialogue-base .mform .form-inline .comment-area textarea, .comment-area .moodle-dialogue-base .mform .form-inline textarea, .moodle-dialogue .mform .form-inline .form-control, .moodle-dialogue .mform .form-inline .comment-area textarea, .comment-area .moodle-dialogue .mform .form-inline textarea, .modal-dialog .mform .form-inline .form-control, .moodle-dialogue-base .moodle-dialogue-wrap .mform .form-inline .form-control, .moodle-dialogue-base .moodle-dialogue-wrap .mform .form-inline .comment-area textarea, .comment-area .moodle-dialogue-base .moodle-dialogue-wrap .mform .form-inline textarea, .modal-dialog .mform .form-inline .comment-area textarea, .comment-area .modal-dialog .mform .form-inline textarea, .moodle-dialogue-hd .mform .form-inline .form-control, .moodle-dialogue-hd .mform .form-inline .comment-area textarea, .comment-area .moodle-dialogue-hd .mform .form-inline textarea, .modal-header .mform .form-inline .form-control, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 .mform .form-inline .form-control, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 .mform .form-inline .comment-area textarea, .comment-area .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 .mform .form-inline textarea, .modal-header .mform .form-inline .comment-area textarea, .comment-area .modal-header .mform .form-inline textarea, .moodle-dialogue-base .custom-select, .moodle-dialogue-base #page-admin-tool-templatelibrary-index #selectcomponent, #page-admin-tool-templatelibrary-index .moodle-dialogue-base #selectcomponent, .moodle-dialogue .custom-select, .moodle-dialogue #page-admin-tool-templatelibrary-index #selectcomponent, #page-admin-tool-templatelibrary-index .moodle-dialogue #selectcomponent, .modal-dialog .custom-select, .moodle-dialogue-base .moodle-dialogue-wrap .custom-select, .moodle-dialogue-base .moodle-dialogue-wrap #page-admin-tool-templatelibrary-index #selectcomponent, #page-admin-tool-templatelibrary-index .moodle-dialogue-base .moodle-dialogue-wrap #selectcomponent, .modal-dialog #page-admin-tool-templatelibrary-index #selectcomponent, #page-admin-tool-templatelibrary-index .modal-dialog #selectcomponent, .moodle-dialogue-hd .custom-select, .moodle-dialogue-hd #page-admin-tool-templatelibrary-index #selectcomponent, #page-admin-tool-templatelibrary-index .moodle-dialogue-hd #selectcomponent, .modal-header .custom-select, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 .custom-select, .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 #page-admin-tool-templatelibrary-index #selectcomponent, #page-admin-tool-templatelibrary-index .path-mod-assign [data-region="grade-panel"] .popout>.col-md-3 #selectcomponent, .modal-header #page-admin-tool-templatelibrary-index #selectcomponent, #page-admin-tool-templatelibrary-index .modal-header #selectcomponent {
+    width: 100%!important;
+}
+
+.form-control, .comment-area textarea, input[type=text], input[type=email], #add_section_numsections, .path-grade-report-grader .gradeparent .text, textarea {
+    font-size: 1rem;
+}

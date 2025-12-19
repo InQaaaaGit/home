@@ -1,0 +1,15 @@
+{{!
+    vim: et ts=2 sts=2 sw=2 syntax=mustache
+    @template: local_cdo_unti2035bas/practice_diaries_control
+}}
+<div class="practice-diaries-control" {{!
+  }}data-uniqid="{{uniqid}}" {{!
+  }}data-streamid="{{streamid}}" {{!
+  }}data-tableid="{{tableid}}">
+  <div class="practice-diaries-add-form"></div>
+</div>
+{{#js}}
+require(['local_cdo_unti2035bas/practice_diaries_control'], function(CTL) {
+  new CTL("{{uniqid}}");
+});
+{{/js}}

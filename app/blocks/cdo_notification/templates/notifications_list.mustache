@@ -1,0 +1,108 @@
+<div class="notifications-list-container">
+    <div class="notifications-list-header">
+        <div class="notifications-list-title">
+            <span class="notifications-count">{{#str}}totalnotifications, block_cdo_notification, {{totalcount}}{{/str}}</span>
+        </div>
+    </div>
+
+    <!-- Search and filter form -->
+    <form method="get" class="notifications-search-form">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="search">{{#str}}searchnotifications, block_cdo_notification{{/str}}</label>
+                    <input type="text" id="search" name="search" class="form-control" 
+                           value="{{search}}" 
+                           placeholder="{{#str}}searchplaceholder, block_cdo_notification{{/str}}">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="sort">{{#str}}sortby, block_cdo_notification{{/str}}</label>
+                    <select id="sort" name="sort" class="form-control">
+                        <option value="date" {{#sort_date}}selected{{/sort_date}}>{{#str}}sortbydate, block_cdo_notification{{/str}}</option>
+                        <option value="header" {{#sort_header}}selected{{/sort_header}}>{{#str}}sortbytitle, block_cdo_notification{{/str}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="order">{{#str}}order, block_cdo_notification{{/str}}</label>
+                    <select id="order" name="order" class="form-control">
+                        <option value="desc" {{#order_desc}}selected{{/order_desc}}>{{#str}}newestfirst, block_cdo_notification{{/str}}</option>
+                        <option value="asc" {{#order_asc}}selected{{/order_asc}}>{{#str}}oldestfirst, block_cdo_notification{{/str}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <div>
+                        <button type="submit" class="btn btn-secondary">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            {{#str}}search, core{{/str}}
+                        </button>
+                        {{#showclear}}
+                        <a href="{{baseurl}}" class="btn btn-outline-secondary">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                            {{#str}}clear, core{{/str}}
+                        </a>
+                        {{/showclear}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    {{^notifications.length}}
+        <div class="notifications-empty">
+            <div class="text-center py-5">
+                <i class="fa fa-bell-slash fa-3x text-muted mb-3"></i>
+                <h4>{{#str}}nonotifications, block_cdo_notification{{/str}}</h4>
+                <p class="text-muted">
+                    {{#search}} {{#str}}nosearchresults, block_cdo_notification{{/str}} {{/search}}
+                    {{^search}} {{#str}}nonotificationsdesc, block_cdo_notification{{/str}} {{/search}}
+                </p>
+            </div>
+        </div>
+    {{/notifications.length}}
+    {{#notifications.length}}
+        <div class="notifications-list">
+            {{#notifications}}
+                <div class="notification-item">
+                    <div class="notification-item-header">
+                        <div class="notification-item-title">
+                            <h3>
+                                <a href="/blocks/cdo_notification/notification.php?id={{notification-idx}}">
+                                    {{{header}}}
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="notification-item-meta">
+                            <span class="notification-date">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                {{{date}}}
+                            </span>
+                            <span class="notification-id">
+                                <i class="fa fa-hashtag" aria-hidden="true"></i>
+                                {{{notification-idx}}}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="notification-item-content">
+                        <p>{{{short_body}}}</p>
+                    </div>
+                </div>
+            {{/notifications}}
+        </div>
+        {{#showpagination}}
+        <div class="notifications-pagination">
+            {{{pagination}}}
+        </div>
+        {{/showpagination}}
+    {{/notifications.length}}
+</div>
+
+<style>
+/* ... (сюда можно вставить CSS из старого файла) ... */
+</style> 

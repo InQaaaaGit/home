@@ -1,0 +1,631 @@
+[
+  {
+    "rep": "Рабочий план 000003936 от 01.11.2023 15:51:55",
+    "group": "сП102",
+    "profile": "",
+    "semester": "Второй семестр",
+    "division": "Педиатрический факультет",
+    "formstudy": "Очная",
+    "leveledu": "Специалитет",
+    "codespeacility": "31.05.02",
+    "speacility": "Педиатрия",
+    "course": "Первый",
+    "GUID": "bc6c5840-42d2-11f0-82c5-566fe53b0049",
+    "discipline": "Иностранный язык",
+    "ControlType": "Зачет",
+    "ControlTypeCode": "000000003",
+    "date": "06.06.2025 00:00:00",
+    "students": [
+      {
+        "FIO": "Анурова Анастасия Юрьевна",
+        "gradebook": "516962",
+        "GUID": "7e3a9f30-39ed-11ef-8f19-5254006bfb7c",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "Администрация 1С (Полякова Ольга Владимировна)",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 60,
+        "Rating_intermediate_certification_discipline": 80,
+        "Final_rating_discipline": 70,
+        "teach_fio": "Администрация 1С (Полякова Ольга Владимировна)"
+      },
+      {
+        "FIO": "Ануфриева Дарья Владимировна",
+        "gradebook": "995395",
+        "GUID": "08f99580-404d-11ef-8034-5254006bfb7c",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 50,
+        "Rating_intermediate_certification_discipline": 90,
+        "Final_rating_discipline": 70,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Гурина Виктория Евгеньевна",
+        "gradebook": "962325",
+        "GUID": "b1244b2a-3f89-11ef-8034-5254006bfb7c",
+        "Grade": "b58cff2b-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Не зачтено",
+        "color": 2,
+        "Average_discipline_rating": 10,
+        "Rating_intermediate_certification_discipline": 50,
+        "Final_rating_discipline": 30,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Джлавян Диана Врежевна",
+        "gradebook": "259429",
+        "GUID": "4c5af306-3a0c-11ef-8f19-5254006bfb7c",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Зуева Анастасия Павловна",
+        "gradebook": "642516",
+        "GUID": "be2ff486-392b-11ef-8f19-5254006bfb7c",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Кильдяков Максим Витальевич",
+        "gradebook": "348285",
+        "GUID": "46ed4861-1cbd-11ee-bba1-98039b779a42",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Михеева Наталия Евгеньевна",
+        "gradebook": "951581",
+        "GUID": "6c9b86b2-3953-11ef-8f19-5254006bfb7c",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Приходько София Руслановна",
+        "gradebook": "265696",
+        "GUID": "f423812a-392b-11ef-8f19-5254006bfb7c",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Рябухина Аксинья Николаевна",
+        "gradebook": "596222",
+        "GUID": "6cc19b80-3d05-11ef-9701-5254006bfb7c",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Сеитова Амина Омар-галиевна",
+        "gradebook": "116923",
+        "GUID": "2c4a02e0-4129-11ef-951f-5254006bfb7c",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Смольянинова Анастасия Александровна",
+        "gradebook": "666911",
+        "GUID": "102d8d0c-3ada-11ef-8f19-5254006bfb7c",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Спичак Оксана Александровна",
+        "gradebook": "712526",
+        "GUID": "c39d0597-209c-11ee-bba1-98039b779a42",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Хасбулатова Ханумчакар Алишевна",
+        "gradebook": "172541",
+        "GUID": "90a68e14-3dc0-11ef-8034-5254006bfb7c",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Шумилов Александр Денисович",
+        "gradebook": "312657",
+        "GUID": "33fae64a-3881-11ef-8f19-5254006bfb7c",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      }
+    ],
+    "teachers": [
+      {
+        "FIO": "Шевцова Ольга Сергеевна",
+        "CODE": "000001941",
+        "GUID": "38bdcba0-ca74-11ea-8bd4-0025900c62bb",
+        "chairman": false,
+        "agreed": false,
+        "user_id": 0
+      }
+    ],
+    "systemgrade": [
+      {
+        "id": "b58cff2b-9e63-11e9-bf07-04d4c4212e85",
+        "value": "Не зачтено",
+        "grade": "Не зачтено",
+        "GUID": "b58cff2b-9e63-11e9-bf07-04d4c4212e85",
+        "short_name": "Не зачтено",
+        "color": 2
+      },
+      {
+        "id": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "value": "Зачтено",
+        "grade": "Зачтено",
+        "GUID": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "short_name": "Зачтено",
+        "color": 2
+      }
+    ],
+    "NameSheet": "Ведомость 000632239",
+    "number": "000632239",
+    "type": "Основная",
+    "typeCode": "000000001",
+    "have_tema": "false",
+    "uid_request": "69cb41bc-e245-40e8-8c59-a6429e02c782",
+    "dateJS": "2025-06-06T00:00:00"
+  },
+  {
+    "rep": "Рабочий план 000003937 от 15.11.2023 10:30:22",
+    "group": "сП103",
+    "profile": "",
+    "semester": "Первый семестр",
+    "division": "Педиатрический факультет",
+    "formstudy": "Очная",
+    "leveledu": "Специалитет",
+    "codespeacility": "31.05.02",
+    "speacility": "Педиатрия",
+    "course": "Второй",
+    "GUID": "bc6c5840-42d2-11f0-82c5-566fe53b004a",
+    "discipline": "Анатомия",
+    "ControlType": "Экзамен",
+    "ControlTypeCode": "000000001",
+    "date": "15.06.2025 00:00:00",
+    "students": [
+      {
+        "FIO": "Иванов Иван Иванович",
+        "gradebook": "123456",
+        "GUID": "7e3a9f30-39ed-11ef-8f19-5254006bfb8a",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "Петров Петр Петрович",
+        "short_name": "Отлично",
+        "color": 1,
+        "Average_discipline_rating": 85,
+        "Rating_intermediate_certification_discipline": 90,
+        "Final_rating_discipline": 88,
+        "teach_fio": "Петров Петр Петрович"
+      },
+      {
+        "FIO": "Петрова Мария Сергеевна",
+        "gradebook": "234567",
+        "GUID": "08f99580-404d-11ef-8034-5254006bfb8b",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Хорошо",
+        "color": 1,
+        "Average_discipline_rating": 75,
+        "Rating_intermediate_certification_discipline": 80,
+        "Final_rating_discipline": 78,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Сидоров Алексей Владимирович",
+        "gradebook": "345678",
+        "GUID": "b1244b2a-3f89-11ef-8034-5254006bfb8c",
+        "Grade": "b58cff2b-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Неудовлетворительно",
+        "color": 3,
+        "Average_discipline_rating": 35,
+        "Rating_intermediate_certification_discipline": 40,
+        "Final_rating_discipline": 38,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Козлова Елена Дмитриевна",
+        "gradebook": "456789",
+        "GUID": "4c5af306-3a0c-11ef-8f19-5254006bfb8d",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Хорошо",
+        "color": 1,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Морозов Дмитрий Александрович",
+        "gradebook": "567890",
+        "GUID": "be2ff486-392b-11ef-8f19-5254006bfb8e",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Удовлетворительно",
+        "color": 1,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      }
+    ],
+    "teachers": [
+      {
+        "FIO": "Петров Петр Петрович",
+        "CODE": "000001942",
+        "GUID": "38bdcba0-ca74-11ea-8bd4-0025900c62bc",
+        "chairman": true,
+        "agreed": false,
+        "user_id": 0
+      },
+      {
+        "FIO": "Смирнова Анна Викторовна",
+        "CODE": "000001943",
+        "GUID": "38bdcba0-ca74-11ea-8bd4-0025900c62bd",
+        "chairman": false,
+        "agreed": false,
+        "user_id": 0
+      }
+    ],
+    "systemgrade": [
+      {
+        "id": "b58cff2b-9e63-11e9-bf07-04d4c4212e85",
+        "value": "Неудовлетворительно",
+        "grade": "Неудовлетворительно",
+        "GUID": "b58cff2b-9e63-11e9-bf07-04d4c4212e85",
+        "short_name": "Неудовлетворительно",
+        "color": 3
+      },
+      {
+        "id": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "value": "Удовлетворительно",
+        "grade": "Удовлетворительно",
+        "GUID": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "short_name": "Удовлетворительно",
+        "color": 1
+      },
+      {
+        "id": "b58cff2c-9e63-11e9-bf07-04d4c4212e85",
+        "value": "Хорошо",
+        "grade": "Хорошо",
+        "GUID": "b58cff2c-9e63-11e9-bf07-04d4c4212e85",
+        "short_name": "Хорошо",
+        "color": 1
+      },
+      {
+        "id": "b58cff2d-9e63-11e9-bf07-04d4c4212e85",
+        "value": "Отлично",
+        "grade": "Отлично",
+        "GUID": "b58cff2d-9e63-11e9-bf07-04d4c4212e85",
+        "short_name": "Отлично",
+        "color": 1
+      }
+    ],
+    "NameSheet": "Ведомость 000632240",
+    "number": "000632240",
+    "type": "Основная",
+    "typeCode": "000000001",
+    "have_tema": "false",
+    "uid_request": "69cb41bc-e245-40e8-8c59-a6429e02c783",
+    "dateJS": "2025-06-15T00:00:00"
+  },
+  {
+    "rep": "Рабочий план 000003938 от 20.11.2023 14:15:33",
+    "group": "сП201",
+    "profile": "",
+    "semester": "Второй семестр",
+    "division": "Лечебный факультет",
+    "formstudy": "Очная",
+    "leveledu": "Специалитет",
+    "codespeacility": "31.05.01",
+    "speacility": "Лечебное дело",
+    "course": "Третий",
+    "GUID": "bc6c5840-42d2-11f0-82c5-566fe53b004b",
+    "discipline": "Физиология",
+    "ControlType": "Дифференцированный зачет",
+    "ControlTypeCode": "000000002",
+    "date": "20.06.2025 00:00:00",
+    "students": [
+      {
+        "FIO": "Волкова Ольга Николаевна",
+        "gradebook": "111111",
+        "GUID": "7e3a9f30-39ed-11ef-8f19-5254006bfb9a",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "Иванова Светлана Михайловна",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 72,
+        "Rating_intermediate_certification_discipline": 75,
+        "Final_rating_discipline": 74,
+        "teach_fio": "Иванова Светлана Михайловна"
+      },
+      {
+        "FIO": "Новиков Сергей Павлович",
+        "gradebook": "222222",
+        "GUID": "08f99580-404d-11ef-8034-5254006bfb9b",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 65,
+        "Rating_intermediate_certification_discipline": 70,
+        "Final_rating_discipline": 68,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Федорова Татьяна Игоревна",
+        "gradebook": "333333",
+        "GUID": "b1244b2a-3f89-11ef-8034-5254006bfb9c",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Соколов Андрей Викторович",
+        "gradebook": "444444",
+        "GUID": "4c5af306-3a0c-11ef-8f19-5254006bfb9d",
+        "Grade": "b58cff2b-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Не зачтено",
+        "color": 2,
+        "Average_discipline_rating": 25,
+        "Rating_intermediate_certification_discipline": 30,
+        "Final_rating_discipline": 28,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Лебедева Надежда Алексеевна",
+        "gradebook": "555555",
+        "GUID": "be2ff486-392b-11ef-8f19-5254006bfb9e",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Зачтено",
+        "color": 2,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      }
+    ],
+    "teachers": [
+      {
+        "FIO": "Иванова Светлана Михайловна",
+        "CODE": "000001944",
+        "GUID": "38bdcba0-ca74-11ea-8bd4-0025900c62be",
+        "chairman": true,
+        "agreed": true,
+        "user_id": 0
+      }
+    ],
+    "systemgrade": [
+      {
+        "id": "b58cff2b-9e63-11e9-bf07-04d4c4212e85",
+        "value": "Не зачтено",
+        "grade": "Не зачтено",
+        "GUID": "b58cff2b-9e63-11e9-bf07-04d4c4212e85",
+        "short_name": "Не зачтено",
+        "color": 2
+      },
+      {
+        "id": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "value": "Зачтено",
+        "grade": "Зачтено",
+        "GUID": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "short_name": "Зачтено",
+        "color": 2
+      }
+    ],
+    "NameSheet": "Ведомость 000632241",
+    "number": "000632241",
+    "type": "Основная",
+    "typeCode": "000000001",
+    "have_tema": "false",
+    "uid_request": "69cb41bc-e245-40e8-8c59-a6429e02c784",
+    "dateJS": "2025-06-20T00:00:00"
+  },
+  {
+    "rep": "Рабочий план 000003939 от 25.11.2023 09:45:11",
+    "group": "сП301",
+    "profile": "",
+    "semester": "Первый семестр",
+    "division": "Стоматологический факультет",
+    "formstudy": "Очная",
+    "leveledu": "Специалитет",
+    "codespeacility": "31.05.03",
+    "speacility": "Стоматология",
+    "course": "Четвертый",
+    "GUID": "bc6c5840-42d2-11f0-82c5-566fe53b004c",
+    "discipline": "Фармакология",
+    "ControlType": "Экзамен",
+    "ControlTypeCode": "000000001",
+    "date": "25.06.2025 00:00:00",
+    "students": [
+      {
+        "FIO": "Белов Максим Олегович",
+        "gradebook": "666666",
+        "GUID": "7e3a9f30-39ed-11ef-8f19-5254006bfbaa",
+        "Grade": "b58cff2d-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "Кузнецова Елена Владимировна",
+        "short_name": "Отлично",
+        "color": 1,
+        "Average_discipline_rating": 92,
+        "Rating_intermediate_certification_discipline": 95,
+        "Final_rating_discipline": 94,
+        "teach_fio": "Кузнецова Елена Владимировна"
+      },
+      {
+        "FIO": "Григорьева Анастасия Дмитриевна",
+        "gradebook": "777777",
+        "GUID": "08f99580-404d-11ef-8034-5254006bfbab",
+        "Grade": "b58cff2c-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Хорошо",
+        "color": 1,
+        "Average_discipline_rating": 78,
+        "Rating_intermediate_certification_discipline": 82,
+        "Final_rating_discipline": 80,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Дмитриев Владимир Сергеевич",
+        "gradebook": "888888",
+        "GUID": "b1244b2a-3f89-11ef-8034-5254006bfbac",
+        "Grade": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Удовлетворительно",
+        "color": 1,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      },
+      {
+        "FIO": "Егорова Виктория Андреевна",
+        "gradebook": "999999",
+        "GUID": "4c5af306-3a0c-11ef-8f19-5254006bfbad",
+        "Grade": "b58cff2c-9e63-11e9-bf07-04d4c4212e85",
+        "teach": "",
+        "short_name": "Хорошо",
+        "color": 1,
+        "Average_discipline_rating": 0,
+        "Rating_intermediate_certification_discipline": 0,
+        "Final_rating_discipline": 0,
+        "teach_fio": ""
+      }
+    ],
+    "teachers": [
+      {
+        "FIO": "Кузнецова Елена Владимировна",
+        "CODE": "000001945",
+        "GUID": "38bdcba0-ca74-11ea-8bd4-0025900c62bf",
+        "chairman": false,
+        "agreed": false,
+        "user_id": 0
+      },
+      {
+        "FIO": "Орлов Игорь Николаевич",
+        "CODE": "000001946",
+        "GUID": "38bdcba0-ca74-11ea-8bd4-0025900c62c0",
+        "chairman": true,
+        "agreed": false,
+        "user_id": 0
+      }
+    ],
+    "systemgrade": [
+      {
+        "id": "b58cff2b-9e63-11e9-bf07-04d4c4212e85",
+        "value": "Неудовлетворительно",
+        "grade": "Неудовлетворительно",
+        "GUID": "b58cff2b-9e63-11e9-bf07-04d4c4212e85",
+        "short_name": "Неудовлетворительно",
+        "color": 3
+      },
+      {
+        "id": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "value": "Удовлетворительно",
+        "grade": "Удовлетворительно",
+        "GUID": "b58cff2a-9e63-11e9-bf07-04d4c4212e85",
+        "short_name": "Удовлетворительно",
+        "color": 1
+      },
+      {
+        "id": "b58cff2c-9e63-11e9-bf07-04d4c4212e85",
+        "value": "Хорошо",
+        "grade": "Хорошо",
+        "GUID": "b58cff2c-9e63-11e9-bf07-04d4c4212e85",
+        "short_name": "Хорошо",
+        "color": 1
+      },
+      {
+        "id": "b58cff2d-9e63-11e9-bf07-04d4c4212e85",
+        "value": "Отлично",
+        "grade": "Отлично",
+        "GUID": "b58cff2d-9e63-11e9-bf07-04d4c4212e85",
+        "short_name": "Отлично",
+        "color": 1
+      }
+    ],
+    "NameSheet": "Ведомость 000632242",
+    "number": "000632242",
+    "type": "Основная",
+    "typeCode": "000000001",
+    "have_tema": "false",
+    "uid_request": "69cb41bc-e245-40e8-8c59-a6429e02c785",
+    "dateJS": "2025-06-25T00:00:00"
+  }
+]
+

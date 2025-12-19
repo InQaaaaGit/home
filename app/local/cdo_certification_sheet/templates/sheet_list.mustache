@@ -1,0 +1,17 @@
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        {{#items}}
+            {{> local_cdo_certification_sheet/tabs/tabs-nav-item }}
+        {{/items}}
+    </div>
+</nav>
+<div class="tab-content">
+    {{#is_empty}}
+        {{{is_empty_html}}}
+    {{/is_empty}}
+    {{^is_empty}}
+        {{#items}}
+            {{> local_cdo_certification_sheet/tabs/tabs-content-container }}
+        {{/items}}
+    {{/is_empty}}
+</div>

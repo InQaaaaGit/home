@@ -1,0 +1,59 @@
+.table-font{
+    font-size: 16pt!important;
+}
+
+.delete-item{
+    color: red;
+    cursor: pointer;
+}
+
+.delete-item:hover{
+    color: #ff4067;
+}
+
+.delete-item-disc{
+    color: #000000;
+    cursor: pointer;
+}
+
+.delete-item-disc:hover{
+    color: #ff4067;
+}
+
+.delete-item-link{
+    color: red;
+    cursor: pointer;
+}
+
+.delete-item-link:hover{
+    color: #ff4067;
+}
+
+.modal-body{
+    margin-bottom: 10px;
+}
+
+.table-files td, .table-files th {
+    font-size: 14px!important;
+}
+
+table.stylish-table td{
+    padding: 10px !important;
+    text-align: center;
+}
+.card--custom {
+    background-color: #3ea7d0;
+    margin-bottom: 15px;
+}
+.collapsed--custom {
+    color: #fff !important;
+    padding: 0 0 0 10px;
+    font-size: 20px;
+    font-weight: bold !important;
+    outline: none;
+}
+*:focus {
+    border: none !important;
+    border-radius: 0;
+    box-shadow: none;
+}

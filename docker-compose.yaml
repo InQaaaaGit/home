@@ -1,0 +1,112 @@
+# vim: et ts=2 sts=2 sw=2 fdm=indent foldlevel=1 foldnestmax=2
+---
+version: '3.5'
+
+services:
+
+  mariadb:
+    image: mariadb:10.6
+    environment:
+      - MARIADB_RANDOM_ROOT_PASSWORD=yes
+      - MARIADB_DATABASE=moodle
+      - MARIADB_USER=moodle
+      - MARIADB_PASSWORD=mo6Ooche
+    command: "--character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci"
+    user: 1001:1001
+    volumes:
+      - ./data/mariadb:/var/lib/mysql
+    ports:
+      - target: 3306
+        published: 33061
+        mode: host
+  php:
+    image: rg.cdo-global.ru/public/php:8.1-moodle-bitnami
+    volumes:
+      - ./etc/php/php.ini:/opt/bitnami/php/etc/php.ini
+      - ./etc/php/php-fpm.conf:/opt/bitnami/php/etc/php-fpm.conf
+      - ./app:/app
+      - ./data/moodledata:/moodledata
+    environment:
+      - HOME=/tmp
+      - TZ=Europe/Moscow
+      - CFG_LANG=en
+      - CFG_LOCALCACHEDIR=/tmp/localcache
+      - CFG_SPACE=prod
+      - CFG_TIMEZONE=Europe/Moscow
+      - CFG_DBTYPE=mariadb
+      - CFG_DBLIBRARY=native
+      - CFG_DBHOST=mariadb
+      - CFG_DBNAME=moodle
+      - CFG_DBUSER=moodle
+      - CFG_DBPASS=mo6Ooche
+      - CFG_PREFIX=mdl_
+      - CFG_DBOPTIONS__DBPERSIST=False
+      - CFG_DBOPTIONS__DBSOCKET=False
+      - CFG_DBOPTIONS__DBPORT=3306
+      - CFG_DBOPTIONS__DBHANDLESOPTIONS=False
+      - CFG_DBOPTIONS__DBCOLLATION=utf8mb4_unicode_ci
+      - CFG_WWWROOT=https://demo-lms-en.cdo-global.ru
+      - CFG_DATAROOT=/moodledata/
+      - CFG_ADMIN=admin
+      - CFG_COUNTRY=RU
+      - CFG_DEFAULTCITY=Moscow
+      - CFG_SITE_IS_PUBLIC=False
+      - CFG_PASSWORDPOLICY=False
+      - CFG_PROTECTUSERNAMES=False
+      # - CFG_SMTPHOSTS=mail
+      # - CFG_SMTPSECURE=False
+      # - CFG_SMTPAUTHTYPE=PLAIN
+      # - CFG_SMTPUSER=user
+      # - CFG_SMTPPASS=123
+      # - CFG_SMTPMAXBULK=10
+      - CFG_NOFIXDAY=True
+      - CFG_REVERSEPROXY=True
+      - CFG_SSLPROXY=True
+      - CFG_SESSION_HANDLER_CLASS=\core\session\redis
+      - CFG_SESSION_REDIS_HOST=redis
+      - CFG_SESSION_REDIS_PORT=6379
+      - CFG_SESSION_REDIS_DATABASE=0
+      - CFG_SESSION_REDIS_PREFIX=s_
+      - CFG_SESSION_REDIS_ACQUIRE_LOCK_TIMEOUT=120
+      - CFG_SESSION_REDIS_ACQUIRE_LOCK_RETRY=100
+      - CFG_SESSION_REDIS_LOCK_EXPIRE=7200
+      - CFG_SESSION_REDIS_SERIALIZER_USE_IGBINARY=False
+
+  nginx:
+    image: nginx:1.20
+    volumes:
+      - ./etc/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./etc/nginx/fastcgi_params:/etc/nginx/fastcgi_params
+      - ./log/nginx:/var/log/nginx
+      - ./app:/app
+      - ./data/moodledata:/moodledata
+    ports:
+      - target: 80
+        published: 80
+        mode: host
+
+  redis:
+    image: bitnami/redis:latest
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - redis_data:/bitnami/redis/data
+
+  php-cron:
+    image: rg.cdo-global.ru/public/php:8.1-moodle-bitnami
+    volumes:
+      - ./etc/php/php.ini:/opt/bitnami/php/etc/php.ini
+      - ./etc/php/php-fpm.conf:/opt/bitnami/php/etc/php-fpm.conf
+      - ./app:/app
+      - ./data/moodledata:/moodledata
+    environment:
+      - HOME=/tmp
+      - TZ=Europe/Moscow
+      # (можно скопировать остальные переменные окружения из php, если требуется)
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["while true; do php /app/admin/cli/cron.php; sleep 60; done"]
+    depends_on:
+      - mariadb
+
+volumes:
+  redis_data:

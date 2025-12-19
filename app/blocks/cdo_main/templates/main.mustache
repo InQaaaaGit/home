@@ -1,0 +1,10 @@
+<div class="container h6">
+    <ul class="list-group">
+        {{#output_plugins}}
+            <li class="m-1 list-group-item {{class}}">
+                <div><a href="{{path}}"> {{title}} </a></div>
+            </li>
+        {{/output_plugins}}
+        <li class="m-1 list-group-item p-0">{{{additional_html}}}</li>
+    </ul>
+</div>

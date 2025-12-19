@@ -1,0 +1,264 @@
+/* Дополнительные стили для улучшения месячного вида DHTMLX Scheduler */
+
+/* Увеличение размеров ячеек в месячном виде */
+.dhx_cal_month .dhx_cal_data div {
+  min-height: 100px !important;
+  padding: 6px !important;
+  position: relative !important;
+}
+
+/* Улучшение отображения событий в месячном виде */
+.dhx_cal_month .dhx_cal_event {
+  margin: 2px 1px !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+  transition: all 0.2s ease !important;
+}
+
+.dhx_cal_month .dhx_cal_event:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Стили для текста событий */
+.dhx_cal_month .dhx_cal_event div {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  padding: 4px 6px !important;
+  font-weight: 500 !important;
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+  border-radius: 4px !important;
+  min-height: 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+/* Улучшение заголовков дней */
+.dhx_cal_month .dhx_cal_date {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #212529 !important;
+  padding: 10px 6px !important;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+  border-bottom: 2px solid #dee2e6 !important;
+  text-align: center !important;
+}
+
+/* Стили для заголовка месяца */
+.dhx_cal_month .dhx_cal_header {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+  color: #fff !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  padding: 15px 0 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.dhx_cal_month .dhx_cal_header div {
+  background-color: transparent !important;
+  border: none !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  font-size: 20px !important;
+  text-transform: capitalize !important;
+}
+
+/* Стили для заголовков дней недели */
+.dhx_cal_month .dhx_cal_week_header {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%) !important;
+  border-bottom: 2px solid #dee2e6 !important;
+}
+
+.dhx_cal_month .dhx_cal_week_header div {
+  background-color: transparent !important;
+  border: none !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  padding: 12px 4px !important;
+  text-align: center !important;
+  text-transform: capitalize !important;
+}
+
+/* Стили для сегодняшнего дня */
+.dhx_cal_month .dhx_cal_today {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%) !important;
+  border: 2px solid #2196f3 !important;
+}
+
+.dhx_cal_month .dhx_cal_today .dhx_cal_date {
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%) !important;
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Стили для выходных дней */
+.dhx_cal_month .dhx_cal_data div:nth-child(7n),
+.dhx_cal_month .dhx_cal_data div:nth-child(7n+1) {
+  background-color: #fafafa !important;
+}
+
+/* Улучшение счетчика событий */
+.dhx_cal_month .dhx_cal_event_counter {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%) !important;
+  color: #fff !important;
+  border-radius: 16px !important;
+  padding: 4px 8px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  margin: 2px !important;
+}
+
+/* Стили для ссылок на события */
+.dhx_cal_month .dhx_cal_event_link {
+  color: #007bff !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: color 0.2s ease !important;
+}
+
+.dhx_cal_month .dhx_cal_event_link:hover {
+  color: #0056b3 !important;
+  text-decoration: underline !important;
+}
+
+/* Улучшение общей сетки */
+.dhx_cal_month .dhx_cal_data {
+  border: 2px solid #dee2e6 !important;
+  border-radius: 0 0 8px 8px !important;
+  overflow: hidden !important;
+}
+
+.dhx_cal_month .dhx_cal_data div {
+  border: 1px solid #e9ecef !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.dhx_cal_month .dhx_cal_data div:hover {
+  background-color: #f8f9fa !important;
+}
+
+/* Стили для пустых дней */
+.dhx_cal_month .dhx_cal_data div:empty::after {
+  content: '' !important;
+  display: block !important;
+  height: 100% !important;
+  background: linear-gradient(45deg, transparent 30%, rgba(0,0,0,0.02) 50%, transparent 70%) !important;
+}
+
+/* Улучшение отображения длинных названий событий */
+.dhx_cal_month .dhx_cal_event div {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  max-width: 100% !important;
+}
+
+/* Стили для разных типов событий */
+.dhx_cal_month .dhx_cal_event.event-lecture {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+}
+
+.dhx_cal_month .dhx_cal_event.event-practice {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+}
+
+.dhx_cal_month .dhx_cal_event.event-exam {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%) !important;
+}
+
+.dhx_cal_month .dhx_cal_event.event-consultation {
+  background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%) !important;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .dhx_cal_month .dhx_cal_data div {
+    min-height: 70px !important;
+    padding: 3px !important;
+  }
+  
+  .dhx_cal_month .dhx_cal_event div {
+    font-size: 10px !important;
+    line-height: 14px !important;
+    padding: 2px 4px !important;
+  }
+  
+  .dhx_cal_month .dhx_cal_date {
+    font-size: 14px !important;
+    padding: 6px 3px !important;
+  }
+  
+  .dhx_cal_month .dhx_cal_header {
+    font-size: 16px !important;
+    padding: 10px 0 !important;
+  }
+  
+  .dhx_cal_month .dhx_cal_header div {
+    font-size: 16px !important;
+  }
+  
+  .dhx_cal_month .dhx_cal_event_counter {
+    font-size: 9px !important;
+    padding: 2px 6px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .dhx_cal_month .dhx_cal_data div {
+    min-height: 60px !important;
+    padding: 2px !important;
+  }
+  
+  .dhx_cal_month .dhx_cal_event div {
+    font-size: 9px !important;
+    line-height: 12px !important;
+    padding: 1px 3px !important;
+  }
+  
+  .dhx_cal_month .dhx_cal_date {
+    font-size: 12px !important;
+    padding: 4px 2px !important;
+  }
+  
+  .dhx_cal_month .dhx_cal_header {
+    font-size: 14px !important;
+    padding: 8px 0 !important;
+  }
+  
+  .dhx_cal_month .dhx_cal_header div {
+    font-size: 14px !important;
+  }
+}
+
+/* Анимации для плавного появления событий */
+@keyframes fadeInEvent {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dhx_cal_month .dhx_cal_event {
+  animation: fadeInEvent 0.3s ease-out !important;
+}
+
+/* Стили для улучшения читаемости */
+.dhx_cal_month .dhx_cal_event div {
+  letter-spacing: 0.3px !important;
+  word-spacing: 1px !important;
+}
+
+/* Улучшение контрастности для лучшей читаемости */
+.dhx_cal_month .dhx_cal_event div {
+  filter: contrast(1.1) !important;
+} 

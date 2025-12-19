@@ -1,0 +1,31 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">{{#str}} time, block_cdo_schedule {{/str}}</th>
+        <th scope="col">{{#str}} place, block_cdo_schedule {{/str}}</th>
+        <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#items}}
+        <tr>
+            <td>{{start_time}} - {{end_time}}</td>
+            <td>{{#classrooms}} {{building.name}} {{room.name}} {{/classrooms}}<br/></td>
+            <td>
+                <div class="row">
+                    <div class="col-12"><strong>{{lesson.lesson_type.name}}</strong></div>
+                </div>
+                <div class="row">
+                    <div class="col-12 b">{{lesson.discipline.name}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-12">{{#teachers}} {{name}} <br />{{/teachers}} </div>
+                </div>
+                <div class="row"> 
+                     <div class="col-12">{{subgroups.name}}</div>
+                </div>
+            </td>
+        </tr>
+    {{/items}}
+    </tbody>
+</table>

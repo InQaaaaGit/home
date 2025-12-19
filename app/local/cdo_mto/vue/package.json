@@ -1,0 +1,29 @@
+{
+  "name": "local_mto",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "main": "webpack.config_old.js",
+  "scripts": {
+    "dev": "cross-env webpack --mode development --progress ",
+    "watch": "cross-env webpack --mode development --watch ",
+    "watch-hot": "cross-env webpack-dev-server --mode development --hot --inline --progress",
+    "build": "cross-env webpack --mode production --progress "
+  },
+  "author": "InQaaaa",
+  "license": "SEE LICENSE IN License FILE",
+  "dependencies": {
+    "resolve-cwd": "^3.0.0",
+    "vue": "~3.4",
+    "vue-cli": "~2.9.6",
+    "pinia": "^2.2.1"
+  },
+  "devDependencies": {
+    "vue-loader": "^17.4.0",
+    "cross-env": "^5.2.0",
+    "webpack": "^5",
+    "webpack-cli": "^4.8.0",
+    "babel-loader": "^8.0.5",
+    "ts-loader": "^9.5.1"
+  }
+}

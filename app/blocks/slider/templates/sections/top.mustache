@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>{{name_top_courses}}</h2>
+    <div class="row">
+        {{#list_top_courses}}
+            <div class="col-md-3">
+                <div>
+                    <a href="/course/view.php?id={{id}}" class="technical-library__item">
+                    <img src="{{image_url}}" alt=" " class="technical-library__image">
+                    <div class="technical-library__bg">
+                        <p class="technical-library__name">
+                            {{fullname}}
+                        </p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        {{/list_top_courses}}
+    </div>
+</div>

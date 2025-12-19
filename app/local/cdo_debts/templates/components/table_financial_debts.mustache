@@ -1,0 +1,22 @@
+<table class="table table-striped mt-20">
+  <thead>
+  <th scope="col" class="text-center">
+    {{#str}} dogovor, local_cdo_debts {{/str}}
+  </th>
+  <th scope="col" class="text-center">
+    {{#str}} sum, local_cdo_debts {{/str}}
+  </th>
+   <th scope="col" class="text-center">
+    Общежитие
+  </th>
+  </thead>
+  <tbody>
+  {{#financial_debts}}
+    <tr>
+      <td class="text-center">{{Dogovor}} №{{contract_number}} от {{contract_date}}</td>
+      <td class="text-center">{{Sum}}</td>
+      <td class="text-center">{{#is_hostel}} Да {{/is_hostel}}</td>
+    </tr>
+  {{/financial_debts}}
+  </tbody>
+</table>

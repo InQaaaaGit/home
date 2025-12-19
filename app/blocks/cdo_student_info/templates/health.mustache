@@ -1,0 +1,19 @@
+{{#haveFiles}}
+<h3>Скачать:</h3>
+<ul class="list-group">
+  {{#data}}
+    <li class="list-group-item">
+      <div>
+        <a href="print.php?file_id={{id}}&filename={{description}}&extension={{extension}}">
+        {{description}}
+        </a>
+      </div>
+    </li>
+  {{/data}}
+</ul>
+{{/haveFiles}}
+{{^haveFiles}}
+  <div class="alert alert-primary">
+    {{#str}} files_not_found, block_cdo_student_info {{/str}}
+  </div>
+{{/haveFiles}}

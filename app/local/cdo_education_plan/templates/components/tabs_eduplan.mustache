@@ -1,0 +1,23 @@
+<div class="tab">
+    {{#eduplan}}
+        {{#CurriculumEntries}}
+            <button class="tablinks {{active}}" onclick="openTab(event, '{{gradebook}}{{period.number}}')">
+                {{period.name}}
+            </button>
+        {{/CurriculumEntries}}
+    {{/eduplan}}
+</div>
+
+{{#eduplan}}
+
+    {{#CurriculumEntries}}
+        <div class="container">
+            <div id="{{gradebook}}{{period.number}}" class="tabcontent" style="{{show}}">
+                {{> local_cdo_education_plan/components/table_education_plan}}
+            </div>
+        </div>
+    {{/CurriculumEntries}}
+
+{{/eduplan}}
+
+

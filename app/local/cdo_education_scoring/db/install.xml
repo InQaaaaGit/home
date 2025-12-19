@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/cdo_education_scoring/db" VERSION="2024100100" COMMENT="XMLDB file for Moodle local/cdo_education_scoring"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="local_cdo_edu_score_survey" COMMENT="Таблица для хранения анкет качества">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="title" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="description" TYPE="text" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="durationdays" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" DEFAULT="30"/>
+        <FIELD NAME="isactive" TYPE="int" LENGTH="1" NOTNULL="true" SEQUENCE="false" DEFAULT="0"/>
+        <FIELD NAME="usercreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="usermodified" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="usercreated" TYPE="foreign" FIELDS="usercreated" REFTABLE="user" REFFIELDS="id"/>
+        <KEY NAME="usermodified" TYPE="foreign" FIELDS="usermodified" REFTABLE="user" REFFIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="isactive" UNIQUE="false" FIELDS="isactive"/>
+        <INDEX NAME="usercreated" UNIQUE="false" FIELDS="usercreated"/>
+      </INDEXES>
+    </TABLE>
+    
+    <TABLE NAME="local_cdo_edu_score_quest" COMMENT="Таблица для хранения вопросов анкет">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="surveyid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="questiontext" TYPE="text" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="description" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Описание вопроса (подсказка)"/>
+        <FIELD NAME="questiontype" TYPE="char" LENGTH="20" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="sortorder" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" DEFAULT="0"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="surveyid" TYPE="foreign" FIELDS="surveyid" REFTABLE="local_cdo_edu_score_survey" REFFIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="surveyid" UNIQUE="false" FIELDS="surveyid"/>
+        <INDEX NAME="surveyid_sortorder" UNIQUE="false" FIELDS="surveyid, sortorder"/>
+      </INDEXES>
+    </TABLE>
+    
+    <TABLE NAME="local_cdo_edu_score_resp" COMMENT="Таблица для хранения ответов на анкеты">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="surveyid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="questionid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="responsevalue" TYPE="text" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="teacher_id" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="ID преподавателя"/>
+        <FIELD NAME="discipline_id" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Код дисциплины"/>
+        <FIELD NAME="discipline_name" TYPE="char" LENGTH="500" NOTNULL="false" SEQUENCE="false" COMMENT="Название дисциплины"/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+        <KEY NAME="surveyid" TYPE="foreign" FIELDS="surveyid" REFTABLE="local_cdo_edu_score_survey" REFFIELDS="id"/>
+        <KEY NAME="questionid" TYPE="foreign" FIELDS="questionid" REFTABLE="local_cdo_edu_score_quest" REFFIELDS="id"/>
+        <KEY NAME="userid" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="surveyid" UNIQUE="false" FIELDS="surveyid"/>
+        <INDEX NAME="questionid" UNIQUE="false" FIELDS="questionid"/>
+        <INDEX NAME="userid" UNIQUE="false" FIELDS="userid"/>
+        <INDEX NAME="surveyid_userid" UNIQUE="false" FIELDS="surveyid, userid"/>
+        <INDEX NAME="teacher_id" UNIQUE="false" FIELDS="teacher_id"/>
+        <INDEX NAME="surveyid_userid_teacher" UNIQUE="false" FIELDS="surveyid, userid, teacher_id"/>
+        <INDEX NAME="survey_user_teacher_disc" UNIQUE="false" FIELDS="surveyid, userid, teacher_id, discipline_id"/>
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>
+

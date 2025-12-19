@@ -1,0 +1,76 @@
+<div id="anchor"></div>
+{% if isAuditor %}
+    <div class="form-group">
+        <label for="secretary">Научный сотрудник</label>
+        <select id="secretary" class="form-control form-control-lg w-100">
+            <option value="0">Не выбрано</option>
+            {% for item in secretary_list %}
+                <option value="{{ item.id }}" {% if item.id == secretary %} selected {% endif %}
+                >{{ "#{item.lastname} #{item.firstname}" }}</option>
+            {% endfor %}
+        </select>
+    </div>
+{% endif %}
+<div class="form-group">
+    <label for="learningProgram">Образовательная программа</label>
+    <select id="learningProgram" class="form-control form-control-lg w-100">
+        {% for program in programs %}
+            <option {% if select_program == program.doc_number %} selected {% endif %}
+                    value="{{ program.doc_number }}"
+                    data-doc_number="{{ program.doc_number }}"
+                    data-year="{{ program.year }}"
+                    data-education_type="{{ program.education_type }}"
+                    data-education_type_id="{{ program.education_type_id }}"
+                    data-education_level="{{ program.education_level }}"
+                    data-education_level_id="{{ program.education_level_id }}"
+                    data-specialty="{{ program.specialty }}"
+                    data-specialty_id="{{ program.specialty_id }}"
+                    data-profile="{{ program.profile }}"
+                    data-profile_id="{{ program.profile_id }}"
+            >
+                {{ program.education_type ? program.education_type : '' }}
+                {{ program.education_level ? " - #{program.education_level}" : ''}}
+                {{ program.specialty ? " - #{program.specialty}" : ''}}
+                {{ program.profile ? " - #{program.profile}" : ''}}
+                {{ program.year ? " (#{program.year})" : ''}}
+            </option>
+        {% endfor %}
+    </select>
+</div>
+<ul id="pills-tab" class="nav nav-pills" role="tablist">
+    <li class="nav-item">
+        <a href="#pills-files"
+           class="nav-link {% if cur_pill == 1 %} active {% endif %}"
+           id="pills-files-tab"
+           data-toggle="pill"
+           role="tab"
+           aria-controls="pills-files"
+           aria-selected="true"
+        >Файлы образовательной программы</a>
+    </li>
+    <li class="nav-item">
+        <a href="#pills-link"
+           class="nav-link {% if cur_pill == 2 %} active {% endif %}"
+           id="pills-link-tab"
+           data-toggle="pill"
+           role="tab"
+           aria-controls="pills-link"
+           aria-selected="true"
+        >Информационные ресурсы</a>
+    </li>
+    <li class="nav-item">
+        <a href="#pills-rpd"
+           class="nav-link {% if cur_pill == 3 %} active {% endif %}"
+           id="pills-rpd-tab"
+           data-toggle="pill"
+           role="tab"
+           aria-controls="pills-rpd"
+           aria-selected="true"
+        >Файлы дисциплин</a>
+    </li>
+</ul>
+<div id="pills-tabContent" class="tab-content">
+    {% include 'files_program.twig' with {cur_pill,files_op,isAuditor,categories} %}
+    {% include 'web_links.twig' with {cur_pill,web_links,isAuditor} %}
+    {% include 'discipline_files.twig' with {cur_pill,disciplines,isAuditor,sections} %}
+</div>

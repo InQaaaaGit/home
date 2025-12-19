@@ -1,0 +1,57 @@
+<ul class="nav nav-tabs" id="orders" role="tablist">
+  {{#gradebooks}}
+    {{#diplomas}}
+      <li class="nav-item">
+        <button class="nav-link {{active}}"
+                id="gb{{id}}"
+                data-toggle="tab"
+                href="#gblink{{id}}"
+                role="tab"
+                aria-controls="acgb{{id}}"
+                aria-selected="true"
+        >
+          {{name}}
+        </button>
+      </li>
+    {{/diplomas}}
+  {{/gradebooks}}
+</ul>
+<div class="tab-content" id="orders-content">
+  {{#gradebooks}}
+    {{#diplomas}}
+      <div class="tab-pane fade {{show}} {{active}}" id="gblink{{id}}" role="tabpanel" aria-labelledby="gb{{id}}">
+        <div class="p-2">
+          <strong>{{document_type}}</strong>
+          Серия: <strong>{{series}}</strong>
+          Номер: <strong>{{number}}</strong>
+          Выдан: <strong>{{issue_date}}</strong>
+          <strong>{{education_type}}</strong>
+        </div>
+
+        <table class="table">
+          <thead>
+          <tr>
+            <th scope="col">{{#str}} discipline, block_cdo_student_info {{/str}}</th>
+            <th scope="col">{{#str}} control_type, block_cdo_student_info {{/str}}</th>
+            <th scope="col"> {{#str}} period_control, block_cdo_student_info {{/str}}</th>
+            <th scope="col"> {{#str}} mark, block_cdo_student_info {{/str}}</th>
+          </tr>
+          </thead>
+          <tbody>
+          {{#categories}}
+            {{#elements}}
+              <tr>
+                <th>{{name}}</th>
+                <td>{{control_type}}</td>
+                <td>{{period_control}}</td>
+                <td>{{mark}}</td>
+              </tr>
+            {{/elements}}
+          {{/categories}}
+          </tbody>
+        </table>
+      </div>
+    {{/diplomas}}
+  {{/gradebooks}}
+</div>
+

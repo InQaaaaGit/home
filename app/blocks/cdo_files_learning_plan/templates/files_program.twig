@@ -1,0 +1,65 @@
+<div id="pills-files"
+     class="tab-pane fade {% if cur_pill == 1 %} active show {% endif %}"
+     role="tabpanel"
+     aria-labelledby="pills-files-tab"
+>
+    {% for key,files in files_op %}
+    <table class="table table-bordered d-none" id="{{ key }}">
+        <thead>
+        <tr>
+            <td>Категория</td>
+            <td>Ссылка на файл</td>
+            {% if not isAuditor %}
+                <td>Действия</td>
+            {% endif %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for file in files %}
+            <tr>
+                <td>{{ file.comment }}</td>
+                <td>
+                    <a href="/blocks/files_learning_plan/get_file.php?file_id={{ file.id }}"
+                       class="link-downloader"
+                       target="_blank"
+                    >{{ file.name }}</a>
+                </td>
+                {% if not isAuditor %}
+                    <td>
+                        <span id="{{ file.id }}" class="delete-item">Удалить</span>
+                    </td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endfor %}
+
+    {% if not isAuditor %}
+        <h6 class="mb-4">Форма добавления документа</h6>
+        <form id="form-learning" method="post" class="form-group w-100" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-12">
+                    <hr>
+                </div>
+                <div class="col-5">
+                    <label for="learningProgram">Выбор категории</label>
+                    <select class="form-control form-control-lg w-100" id="learningProgram" name="category" required>
+                        {% for category in categories %}
+                            <option>{{ category }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="download-file-input">Выберите файл <br><small>*Формат файла pdf</small></label>
+                        <input id="download-file-input" type="file" class="form-control-file" name="new_file" required accept="application/pdf">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <button type="submit" class="btn btn-primary mb-2">Загрузить документ</button>
+                </div>
+            </div>
+        </form>
+    {% endif %}
+</div>

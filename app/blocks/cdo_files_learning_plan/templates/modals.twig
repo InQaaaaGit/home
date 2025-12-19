@@ -1,0 +1,152 @@
+<div class="modal fade"
+     id="new-modal"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="new-modal-title"
+     aria-hidden="true"
+     style="position: fixed; width: 100%; height: 100%;"
+>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="new-modal-title" class="modal-title"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div id="new-modal-body" class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" id="new-modal-close" class="btn btn-sm" data-dismiss="modal"></button>
+                <button type="button" id="new-modal-confirm" class="btn btn-sm" data-dismiss="modal"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-sm"
+     id="new-modal-info"
+     tabindex="-1"
+     role="dialog"
+     aria-labelledby="new-modal-label-info"
+     aria-hidden="true"
+     style="position: fixed; width: 100%; height: 100%;"
+>
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="main-view-info-title"></h6>
+            </div>
+            <div class="modal-body" id="main-view-info-text">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if not isAuditor %}
+    <div class="modal" id="modal_add_file" style="position: fixed; width: 100%; height: 100%;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Загрузить файл</h5>
+                    <button class="close" data-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="modal_discipline_id">
+                    <input type="hidden" id="modal_mode">
+                    <input type="hidden" id="modal_section">
+                    <div class="form-group">
+                        <label for="modal_program">Образовательная программа</label>
+                        <input type="text" class="form-control w-100" id="modal_program" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal_discipline">Дисциплина</label>
+                        <input type="text" class="form-control w-100" id="modal_discipline" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal_section_name">Блок</label>
+                        <input type="text" class="form-control w-100" id="modal_section_name" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal_file">Файл для загрузки</label>
+                        <input type="file" class="form-control w-100" id="modal_file" accept="application/pdf" multiple>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-12 text-center">
+                        <button type="button" class="btn btn-primary file-save">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal_add_link" style="position: fixed; width: 100%; height: 100%;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Добавить ресурс</h5>
+                    <button class="close" data-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" class="d-none" id="modal_link_guid">
+                    <input type="hidden" class="d-none" id="modal_link_mode">
+                    <div class="form-group">
+                        <label for="modal_link_name">Наименование</label>
+                        <input type="text" class="form-control w-100" id="modal_link_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="modal_link">Ссылка</label>
+                        <input type="text" class="form-control w-100" id="modal_link">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-12 text-center">
+                        <button type="button" class="btn btn-primary link-save">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{#{% else %}#}
+
+    <div class="modal" id="modal_edit_notes" style="position: fixed; width: 100%; height: 100%;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Редактирование комментария</h5>
+                    <button class="close" data-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form_edit_notes">
+                        <input type="hidden" class="modal_discipline_id" name="discipline_id">
+                        <input type="hidden" class="modal_mode" name="mode">
+                        <input type="hidden" class="modal_section" name="section">
+                        <div class="form-group">
+                            <label for="modal_program">Образовательная программа</label>
+                            <input type="text" class="form-control w-100 modal_program" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal_discipline">Дисциплина</label>
+                            <input type="text" class="form-control w-100 modal_discipline" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal_section_name">Блок</label>
+                            <input type="text" class="form-control w-100 modal_section_name" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal_notes">Комментарий</label>
+                            <textarea class="form-control w-100 modal_notes" name="notes"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-12 text-center">
+                        <button type="button" class="btn btn-primary notes-save">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endif %}

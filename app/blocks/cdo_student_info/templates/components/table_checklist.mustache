@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">{{#str}} department_name, block_cdo_student_info {{/str}}</th>
+            <th scope="col">{{#str}} date, block_cdo_student_info {{/str}}</th>
+            <th scope="col">{{#str}} mark, block_cdo_student_info {{/str}}</th>
+            <th scope="col">{{#str}} commentary, block_cdo_student_info {{/str}}</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#department}}
+        <tr>
+            <th scope="row">{{department_name}} </th>
+            <td>{{department_date}}</td>
+            <td>{{mark}}</td>
+            <td>{{comment}}</td>
+        </tr>
+    {{/department}}
+    </tbody>
+</table>

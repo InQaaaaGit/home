@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>{{name_category_open_course}}</h2>
+    <div class="description-mainpage">{{{description_open_courses}}}</div>
+    <div class="row">
+        {{#courses}}
+       <!-- <div class="col-md-3">
+            {{> core_course/course_box }}
+        </div>-->
+        <div class="col-md-3">
+            <img src="http://79.143.31.153/pluginfile.php/1/block_slider/slide/18/2020-10-22_15-57-18.png" alt=" " class="technical-library__image">
+            <a href="{{href}}">{{name}}</a>
+        </div>
+        {{/courses }}
+    </div>
+    <div class="row">
+        <div class="col-md-12 mt-2 text-center mb-4">
+            <a class="btn btn-primary"
+               href="/course/index.php?categoryid={{name_category_open_course_id}}">
+                {{name_category_open_course_link}}
+            </a>
+        </div>
+    </div>
+</div>

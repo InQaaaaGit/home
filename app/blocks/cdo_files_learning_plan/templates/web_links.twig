@@ -1,0 +1,55 @@
+<div id="pills-link"
+     class="tab-pane fade {% if cur_pill == 2 %} active show {% endif %}"
+     role="tabpanel"
+     aria-labelledby="pills-rpd-tab"
+>
+    {% for key,links in web_links %}
+        <table class="table table-bordered d-none" id="weblinks_{{ key }}">
+            <thead>
+            <tr>
+                <td>Наименование</td>
+                {% if not isAuditor %}
+                    <td>Действия</td>
+                {% endif %}
+            </tr>
+            </thead>
+            <tbody>
+            {% for web_link in links %}
+                <tr>
+                    <td>
+                        {% if web_link %}
+                            <a href="{{ web_link.link_URL }}"
+                               class="link-downloader"
+                               target="_blank"
+                               data-type="link_name"
+                            >{{ web_link.link_name }}</a>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="javascript:;"
+                           class="link_edit_link"
+                           data-toggle="modal"
+                           data-target="#modal_add_link"
+                        >Изменить</a>
+                        &nbsp;
+                        <span id="{{ web_link.link_guid }}" class="delete-item-link">Удалить</span>
+                    </td>
+                    <td class="d-none" data-type="link_guid">
+                        {{ web_link.link_guid }}
+                    </td>
+                    <td class="d-none" data-type="link_URL">
+                        {{ web_link.link_URL }}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endfor %}
+    {% if not isAuditor %}
+        <div class="col-6 col-md-offset-3 mx-auto text-center">
+            <button type="button" class="btn btn-primary link_add_link" data-toggle="modal"
+                    data-target="#modal_add_link">Добавить
+            </button>
+        </div>
+    {% endif %}
+</div>

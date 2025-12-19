@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест плагина доступности</title>
+    <link rel="stylesheet" href="css/bvi.min.css">
+</head>
+<body>
+    <h1>Тест плагина доступности для слабовидящих</h1>
+    <p>Это тестовая страница для проверки работы плагина BVI.</p>
+    
+    <!-- Кнопка для открытия панели доступности -->
+    <a href="#" class="bvi-open">Версия для слабовидящих</a>
+    
+    <div class="bvi-speech">
+        <p>Этот текст может быть озвучен синтезатором речи.</p>
+    </div>
+    
+    <img src="https://via.placeholder.com/300x200" alt="Тестовое изображение" class="bvi-img">
+    
+    <script src="js/bvi.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Инициализируем BVI плагин
+            if (typeof isvek !== 'undefined' && isvek.Bvi) {
+                new isvek.Bvi({
+                    target: '.bvi-open',
+                    fontSize: 16,
+                    theme: 'white',
+                    images: 'grayscale',
+                    letterSpacing: 'normal',
+                    lineHeight: 'normal',
+                    speech: true,
+                    fontFamily: 'arial',
+                    builtElements: false,
+                    panelFixed: true,
+                    panelHide: false,
+                    reload: false,
+                    lang: 'ru-RU'
+                });
+            }
+        });
+    </script>
+</body>
+</html>

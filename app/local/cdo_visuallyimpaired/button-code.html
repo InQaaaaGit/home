@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Код кнопки доступности</title>
+    <link rel="stylesheet" href="css/bvi.min.css">
+</head>
+<body>
+    <h1>Код кнопки доступности для слабовидящих</h1>
+    
+    <h2>1. Простая кнопка (рекомендуется)</h2>
+    <pre><code>&lt;button class="bvi-open" style="
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+"&gt;
+    &lt;span style="font-size: 18px;"&gt;👁️&lt;/span&gt;
+    &lt;span&gt;Доступность&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+
+    <h2>2. Плавающая кнопка (всегда видна)</h2>
+    <pre><code>&lt;button class="bvi-open" style="
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999999;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+"&gt;
+    &lt;span style="font-size: 18px;"&gt;👁️&lt;/span&gt;
+    &lt;span&gt;Доступность&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+
+    <h2>3. Кнопка-ссылка</h2>
+    <pre><code>&lt;a href="#" class="bvi-open" style="
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+    transition: all 0.3s ease;
+"&gt;
+    👁️ Доступность
+&lt;/a&gt;</code></pre>
+
+    <h2>4. Минималистичная кнопка</h2>
+    <pre><code>&lt;button class="bvi-open" style="
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+"&gt;
+    Доступность
+&lt;/button&gt;</code></pre>
+
+    <h2>5. Кнопка с иконкой (без эмодзи)</h2>
+    <pre><code>&lt;button class="bvi-open" style="
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+"&gt;
+    &lt;span&gt;👁️&lt;/span&gt;
+    Доступность
+&lt;/button&gt;</code></pre>
+
+    <h2>6. Кнопка в стиле Moodle</h2>
+    <pre><code>&lt;button class="bvi-open btn btn-primary" style="
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 3px;
+"&gt;
+    👁️ Доступность
+&lt;/button&gt;</code></pre>
+
+    <hr>
+    
+    <h2>JavaScript код для инициализации</h2>
+    <pre><code>&lt;script src="js/bvi.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+document.addEventListener('DOMContentLoaded', function() {
+    // Ждем загрузки BVI плагина
+    var checkBVI = setInterval(function() {
+        if (typeof window.isvek !== 'undefined' && window.isvek.Bvi) {
+            clearInterval(checkBVI);
+            
+            // Инициализируем BVI плагин
+            new window.isvek.Bvi({
+                target: '.bvi-open',
+                fontSize: 16,
+                theme: 'white',
+                images: 'grayscale',
+                letterSpacing: 'normal',
+                lineHeight: 'normal',
+                speech: true,
+                fontFamily: 'arial',
+                builtElements: false,
+                panelFixed: true,
+                panelHide: false,
+                reload: false,
+                lang: 'ru-RU'
+            });
+            console.log('BVI плагин инициализирован');
+        }
+    }, 100);
+});
+&lt;/script&gt;</code></pre>
+
+    <hr>
+    
+    <h2>Полный пример HTML страницы</h2>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Моя страница&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/bvi.min.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Ваш контент --&gt;
+    &lt;h1&gt;Заголовок страницы&lt;/h1&gt;
+    &lt;p&gt;Содержимое страницы...&lt;/p&gt;
+    
+    &lt;!-- Кнопка доступности --&gt;
+    &lt;button class="bvi-open" style="
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 999999;
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 16px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    "&gt;
+        &lt;span style="font-size: 18px;"&gt;👁️&lt;/span&gt;
+        &lt;span&gt;Доступность&lt;/span&gt;
+    &lt;/button&gt;
+    
+    &lt;!-- JavaScript --&gt;
+    &lt;script src="js/bvi.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+    document.addEventListener('DOMContentLoaded', function() {
+        var checkBVI = setInterval(function() {
+            if (typeof window.isvek !== 'undefined' && window.isvek.Bvi) {
+                clearInterval(checkBVI);
+                new window.isvek.Bvi({
+                    target: '.bvi-open',
+                    fontSize: 16,
+                    theme: 'white',
+                    images: 'grayscale',
+                    letterSpacing: 'normal',
+                    lineHeight: 'normal',
+                    speech: true,
+                    fontFamily: 'arial',
+                    builtElements: false,
+                    panelFixed: true,
+                    panelHide: false,
+                    reload: false,
+                    lang: 'ru-RU'
+                });
+            }
+        }, 100);
+    });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <hr>
+    
+    <h2>Инструкция по использованию:</h2>
+    <ol>
+        <li><strong>Скопируйте HTML код</strong> кнопки в нужное место на странице</li>
+        <li><strong>Подключите CSS:</strong> <code>&lt;link rel="stylesheet" href="css/bvi.min.css"&gt;</code></li>
+        <li><strong>Подключите JavaScript:</strong> <code>&lt;script src="js/bvi.min.js"&gt;&lt;/script&gt;</code></li>
+        <li><strong>Добавьте инициализацию</strong> BVI плагина</li>
+        <li><strong>Убедитесь, что класс</strong> <code>bvi-open</code> присутствует на кнопке</li>
+    </ol>
+    
+    <h2>Важные моменты:</h2>
+    <ul>
+        <li>Класс <code>bvi-open</code> обязателен для работы кнопки</li>
+        <li>Можно использовать любой HTML элемент: <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;div&gt;</code></li>
+        <li>Стили можно изменить по своему усмотрению</li>
+        <li>Плавающая кнопка (position: fixed) всегда будет видна</li>
+        <li>z-index: 999999 обеспечивает отображение поверх других элементов</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+    "name": "root/cdo_config",
+    "autoload": {
+        "psr-4": {
+            "Root\\CdoConfig\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sergey Nechaev",
+            "email": "sergn@cdo-global.ru"
+        }
+    ],
+    "require-dev": {
+        "symfony/var-dumper": "^5.4"
+    }
+}

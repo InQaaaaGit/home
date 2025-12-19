@@ -1,0 +1,1165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "result": {
+      "type": "object",
+      "properties": {
+        "extensions": {
+          "type": "object",
+          "properties": {
+            "https://id.2035.university/xapi/extension/uav/actuality-score": {
+              "description": "Актуальность",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/team-score": {
+              "description": "Баллы команды",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/flight-quality-score": {
+              "description": "Безопасность и качество полёта",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/load-weight": {
+              "description": "Вес груза",
+              "$ref": "#/definitions/WeightSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/task-completion-time": {
+              "description": "Время выполнения задания",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/troubleshooting-time": {
+              "description": "Время дефектовки дрона",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/team-time": {
+              "description": "Время команды",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/documentation-time": {
+              "description": "Время на заполнение документации",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/flight-preparation-time": {
+              "description": "Время подготовки БВС к полету",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/drone-programming-time": {
+              "description": "Время программирования БВС",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/track-completion-time": {
+              "description": "Время прохождения трассы",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/drone-assembly-time": {
+              "description": "Время сборки БВС",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/drone-servicing-time": {
+              "description": "Время технического обслуживания дрона",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/successful-landing-time": {
+              "description": "Время успешной посадки",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/first-attempt-success": {
+              "description": "Выполнение задания с первой попытки",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/success": {
+              "description": "Факт успешно выполненного задания",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/load-lifting-height": {
+              "description": "Высота поднятия груза",
+              "$ref": "#/definitions/DimensionSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/project-completeness-score": {
+              "description": "Завершенность проекта, наличие действующего прототипа, продемонстрированного в презентации",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/indicator-touch-quality-score": {
+              "description": "Касание индикатора",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/indicator-touch-success": {
+              "description": "Касание индикатора",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/trick-count": {
+              "description": "Количество выполненных трюков",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/delivered-load-count": {
+              "description": "Количество доставленных грузов",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/fixed-defect-count": {
+              "description": "Количество исправленных дефектов",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/circle-count": {
+              "description": "Количество кругов",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/score": {
+              "description": "Количество набранных баллов/очков",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/found-defect-count": {
+              "description": "Количество найденных дефектов",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/found-object-count": {
+              "description": "Количество найденных объектов",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/flight-count": {
+              "description": "Количество полетов",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/drone-hit-count": {
+              "description": "Количество попаданий по БВС",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/attempt-count": {
+              "description": "Количество попыток",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/target-hit-count": {
+              "description": "Количество пораженных целей",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/passed-obstacle-count": {
+              "description": "Количество пройденных препятствий",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/hit-obstacle-count": {
+              "description": "Количество сбитых препятствий",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/successful-flight-count": {
+              "description": "Количество успешных перелетов",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/max-drone-speed": {
+              "description": "Максимальная скорость БВС",
+              "$ref": "#/definitions/SpeedSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/max-signal-strength-score": {
+              "description": "Максимальная устойчивость и мощность сигнала",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/max-signal-strength-pct": {
+              "description": "Максимальная устойчивость и мощность сигнала",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/emergency-count": {
+              "description": "Нештатные ситуации",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/novelty-score": {
+              "description": "Новизна",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/total-time": {
+              "description": "Общее время",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/flight-preparation-quality": {
+              "description": "Подготовка БВС к полёту",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/practical-usefullness-score": {
+              "description": "Практическое применение и перспективы использования",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/presentation-score": {
+              "description": "Презентация",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/flight-time": {
+              "description": "Продолжительность полета",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/team-rank": {
+              "description": "Рейтинговое место команды",
+              "$ref": "#/definitions/RankSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/person-rank": {
+              "description": "Рейтинговое место участника",
+              "$ref": "#/definitions/RankSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/drone-assembly-speed-score": {
+              "description": "Скорость сборки БВС",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/drone-assembly-quality-score": {
+              "description": "Качество сборки БВС",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/tracking-speed": {
+              "description": "Скорость отслеживания объекта",
+              "$ref": "#/definitions/SpeedSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/spatial-precision-score": {
+              "description": "Точность геопространственных данных",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/spatial-precision-pct": {
+              "description": "Точность геопространственных данных",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/orthophoto-quality-score": {
+              "description": "Точность и детализация ортофотоплана",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/orthophoto-quality-pct": {
+              "description": "Точность и детализация ортофотоплана",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/moving-target-load-hit-accuracy-score": {
+              "description": "Точность попадания в движущуюся мишень грузом",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/moving-target-load-hit-accuracy-success": {
+              "description": "Точность попадания в движущуюся мишень грузом",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/moving-target-load-hit-accuracy-pct": {
+              "description": "Точность попадания в движущуюся мишень грузом",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/moving-target-drone-hit-accuracy-score": {
+              "description": "Точность попадания в движущуюся мишень дроном",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/moving-target-drone-hit-accuracy-success": {
+              "description": "Точность попадания в движущуюся мишень дроном",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/moving-target-drone-hit-accuracy-pct": {
+              "description": "Точность попадания в движущуюся мишень дроном",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/still-target-load-hit-accuracy-score": {
+              "description": "Точность попадания в стационарную мишень грузом",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/still-target-load-hit-accuracy-success": {
+              "description": "Точность попадания в стационарную мишень грузом",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/still-target-drone-hit-accuracy-score": {
+              "description": "Точность попадания в стационарную мишень дроном",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/still-target-drone-hit-accuracy-success": {
+              "description": "Точность попадания в стационарную мишень дроном",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/still-target-drone-hit-accuracy-pct": {
+              "description": "Точность попадания в стационарную мишень дроном",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/moving-target-load-knockout-accuracy-score": {
+              "description": "Точность поражения движущейся цели грузом",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/moving-target-load-knockout-accuracy-success": {
+              "description": "Точность поражения движущейся цели грузом",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/moving-target-load-knockout-accuracy-pct": {
+              "description": "Точность поражения движущейся цели грузом",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/moving-target-drone-knockout-accuracy-score": {
+              "description": "Точность поражения движущейся цели дроном",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/moving-target-drone-knockout-accuracy-success": {
+              "description": "Точность поражения движущейся цели дроном",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/moving-target-drone-knockout-accuracy-pct": {
+              "description": "Точность поражения движущейся цели дроном",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/still-target-load-knockout-accuracy-score": {
+              "description": "Точность поражения стационарной цели грузом",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/still-target-load-knockout-accuracy-success": {
+              "description": "Точность поражения стационарной цели грузом",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/still-target-load-knockout-accuracy-pct": {
+              "description": "Точность поражения стационарной цели грузом",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/still-target-drone-knockout-accuracy-score": {
+              "description": "Точность поражения стационарной цели дроном",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/still-target-drone-knockout-accuracy-success": {
+              "description": "Точность поражения стационарной цели дроном",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/still-target-drone-knockout-accuracy-pct": {
+              "description": "Точность поражения стационарной цели дроном",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/landing-accuracy-score": {
+              "description": "Точность посадки",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/landing-success": {
+              "description": "Факт успешной посадки",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/penalty-time": {
+              "description": "Штрафное время",
+              "$ref": "#/definitions/DurationSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/penalty-points": {
+              "description": "Штрафные баллы/очки",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/a2023-compliance": {
+              "description": "Соответствует одному или нескольким направлениям отраслей, приоритетных для программы Акселератора А2023",
+              "$ref": "#/definitions/TextSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/industry-applicability": {
+              "description": "Применимость предлагаемого технологического решения для задач отрасли",
+              "$ref": "#/definitions/TextSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/market-requirements-compliance": {
+              "description": "Отвечает ли предлагаемое решение запросам рынка",
+              "$ref": "#/definitions/TextSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/qualified-team-presence": {
+              "description": "Наличие команды, обладающей необходимым набором компетенции для реализации проекта",
+              "$ref": "#/definitions/TextSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/confirmed-results-presence": {
+              "description": "Наличие подтвержденных результатов работы команды над проектом",
+              "$ref": "#/definitions/TextSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/technology-component-presence": {
+              "description": "Наличие технологической компоненты в предлагаемом решении",
+              "$ref": "#/definitions/TextSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/conclusion": {
+              "description": "Заключение",
+              "$ref": "#/definitions/TextSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/calc-complexity-pct": {
+              "description": "Уровень сложности расчётов",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/calc-complexity-score": {
+              "description": "Уровень сложности расчётов",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/calc-accuracy-pct": {
+              "description": "Точность расчётов",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/calc-accuracy-score": {
+              "description": "Точность расчётов",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/design-complexity-pct": {
+              "description": "Сложность конструкции",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/desing-complexity-score": {
+              "description": "Сложность конструкции",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/docs-org-std-compliance": {
+              "description": "Соответствие разрабатываемых документов стандартам организации",
+              "$ref": "#/definitions/TextSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/docs-org-std-compliance-score": {
+              "description": "Соответствие разрабатываемых документов стандартам организации",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/docs-ustd-compliance": {
+              "description": "Соответствие разрабатываемых документов стандартам ЕСТД",
+              "$ref": "#/definitions/TextSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/docs-ustd-compliance-score": {
+              "description": "Соответствие разрабатываемых документов стандартам ЕСТД",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/fault-count": {
+              "description": "Количество допущенных ошибок",
+              "$ref": "#/definitions/CountSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/analysis-correctness-pct": {
+              "description": "Правильность анализа",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/analysis-correctness-score": {
+              "description": "Правильность анализа",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/fault-location-success": {
+              "description": "Умение искать и устранять причины неисправностей",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/fault-location-score": {
+              "description": "Умение искать и устранять причины неисправностей",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/decision-making-success": {
+              "description": "Самостоятельное принятие решений",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/decision-making-score": {
+              "description": "Самостоятельное принятие решений",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/task-accomplishing-accuracy-pct": {
+              "description": "Точность выполнения задания",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/task-accomplishing-accuracy-score": {
+              "description": "Точность выполнения задания",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/assembly-complexity-level-pct": {
+              "description": "Уровень сложности монтажа",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/assembly-complexity-level-score": {
+              "description": "Уровень сложности монтажа",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/assembly-quality-score": {
+              "description": "Качество монтажа",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/assembly-quality-pct": {
+              "description": "Качество монтажа",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/complex-soldering-ability-success": {
+              "description": "Способность распайки сложных модулей/блоков по схеме электрической и принципиальной",
+              "$ref": "#/definitions/YesNoSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/complex-soldering-ability-score": {
+              "description": "Способность распайки сложных модулей/блоков по схеме электрической и принципиальной",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/complex-soldering-ability": {
+              "description": "Способность распайки сложных модулей/блоков по схеме электрической и принципиальной",
+              "$ref": "#/definitions/TextSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/circuit-design-understanding-level-pct": {
+              "description": "Уровень понимания схемотехники",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/circuit-design-understanding-level-score": {
+              "description": "Уровень понимания схемотехники",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/work-complexity-level-pct": {
+              "description": "Уровень сложности работы",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/work-complexity-level-score": {
+              "description": "Уровень сложности работы",
+              "$ref": "#/definitions/ScoreSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/work-accuracy-pct": {
+              "description": "Точность работы",
+              "$ref": "#/definitions/PercentsSchema"
+            },
+            "https://id.2035.university/xapi/extension/uav/work-accuracy-score": {
+              "description": "Точность работы",
+              "$ref": "#/definitions/ScoreSchema"
+            }
+          }
+        }
+      }
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "extensions": {
+          "type": "object",
+          "properties": {
+            "https://api.2035.university/sign_team_fact": {
+                "type": "boolean",
+                "description": "Признак командности факта"
+            },
+            "https://api.2035.university/team_name": {
+                "type": "string",
+                "description": "Название команды"
+            },
+            "https://id.2035.university/xapi/extension/actor-role": {
+                "type": "string",
+                "description": "Роль актора в команде",
+                "examples": [
+                    "member",
+                    "leader",
+                    "expert",
+                    "coder",
+                    "pilot",
+                    "assembler",
+                    "engineer"
+                ]
+            },
+            "https://api.2035.university/qualification": {
+              "type": "string",
+              "description": "Присвоенная квалификация, указанная в документе (дипломе, свидетельстве)",
+              "examples": [
+                "Оператор БПЛА"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/method_of_fixation": {
+              "type": "string",
+              "description": "Способ фиксации данных о деятельности",
+              "examples": [
+                "Фиксация в LMS"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/id_of_responsible_for_fixation": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Идентификаторы людей, осуществляющих фиксацию - unti id методиста",
+              "examples": [
+                [
+                  "33333",
+                  "44444"
+                ]
+              ]
+            },
+            "https://id.2035.university/xapi/extension/role_of_responsible_for_fixation": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["Методист"]
+              },
+              "description": "Роли людей, осуществляющих фиксацию",
+              "examples": [
+                [
+                  "Методист",
+                  "Методист"
+                ]
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/usage-area": {
+              "type": "string",
+              "description": "Сфера применения",
+              "examples": [
+                "Домашнее хозяйство",
+                "Сельское хозяйство",
+                "Логистика",
+                "Геодезия и картография"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/addressed-problem": {
+              "type": "string",
+              "description": "Подробное описание задачи, которую предлагается решить в рамках практической деятельности в промежуточной и/или итоговой аттестации",
+              "examples": [
+                "Разработать дрон для перемещения носков в стиральную машину и обратно с коэффициентом потерь не более 2%"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/drone-vendor-and-model": {
+              "type": "string",
+              "description": "Название фирмы-производителя БВС и конкретная модель БВС у производителя",
+              "examples": ["Василий Пупкин и сыновья, Пк-2024"]
+            },
+            "https://id.2035.university/xapi/extension/uav/drone-type": {
+              "type": "string",
+              "description": "Тип БВС",
+              "examples": [
+                "Мультироторный",
+                "Самолётный"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/engine-type": {
+              "type": "string",
+              "description": "Силовая установка",
+              "examples": [
+                "Электрическая",
+                "Двигатель внутреннего сгорания"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/drone-weight": {
+              "type": "number",
+              "description": "Приблизительная масса БВС в килограммах",
+              "examples": [
+                0.3
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/flight-control-platform": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Устройства, с помощью которых управляли БВС",
+              "examples": [
+                [
+                  "Смартфон"
+                ],
+                [
+                  "Пульт ДУ"
+                ],
+                [
+                  "НСУ"
+                ],
+                [
+                  "Ноутбук"
+                ]
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/drone-payload": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Полезная нагрузка (при наличии)",
+              "examples": [
+                [
+                  "Устройства захвата груза",
+                  "Фотокамера"
+                ]
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/flight-controller": {
+              "type": "string",
+              "description": "Производитель и модель полётного контроллера",
+              "examples": ["BETAFPV Cetus Pro"]
+            },
+            "https://id.2035.university/xapi/extension/uav/flight-altitude": {
+              "type": "number",
+              "description": "Предполагаемая высота полёта БВС, на которой выполняется решаемая задача, в метрах",
+              "examples": [
+                1
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/flight-location": {
+              "type": "string",
+              "description": "Место выполнения полета",
+              "examples": [
+                "Квартира",
+                "Поле",
+                "ЛЭП",
+                "Склад"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/track-description": {
+              "type": "string",
+              "description": "Описание трассы: наличие препятствий, их типов, заданная траектория полёта и т.п.",
+              "examples": [
+                "Двухкомнатная квартира, захламлённая коробками от пиццы"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/track-length": {
+              "type": "integer",
+              "description": "Приблизительная протяжённость заданной траектории полёта в метрах",
+              "examples": [
+                20
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/flight-control-mode": {
+              "type": "string",
+              "description": "Управление полётом",
+              "enum": [
+                "Только зрительный контакт",
+                "По приборам (без видео)",
+                "По видео (не FPV)",
+                "В режиме FPV"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/flight-mode": {
+              "type": "string",
+              "description": "Режим полёта",
+              "enum": [
+                "Полностью автоматическое управление",
+                "Полностью ручное управление",
+                "Гибридное управление"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/flight-type": {
+              "type": "string",
+              "description": "Тип полета",
+              "enum": [
+                "Реальный полёт",
+                "Полёт в симуляторе"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/times-of-day": {
+              "type": "string",
+              "description": "Время суток",
+              "enum": [
+                "День",
+                "Сумерки",
+                "Ночь"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/line-of-sight": {
+              "type": "string",
+              "description": "Видимость",
+              "examples": [
+                "VLOS",
+                "BVLOS"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/meteo-conditions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Метеорологическая обстановка",
+              "examples": [
+                [
+                  "Дождь"
+                ],
+                [
+                  "Ветер"
+                ]
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/drone-count": {
+              "type": "string",
+              "description": "Количество дронов под управлением",
+              "enum": [
+                "Одиночный",
+                "Группа"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/functional-tasks": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Перечень задач, выполняемых для решения кейса/проекта в рамках практической деятельности в промежуточной и/или итоговой аттестации",
+              "examples": [
+                [
+                  "Огибание препятствий",
+                  "Расчёт траектории развевающихся на ветру штор",
+                  "Уклонение от кошки"
+                ]
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/work-object": {
+              "type": "string",
+              "description": "Подробное описание объекта (беспилотная авиационная система, компоненты, механизмы, узлы и т.д.) и его характеристик в рамках работы над кейсом/заданием/проектом",
+              "examples": [
+                "Малогабаритное БВС на напечатанной из МИПП раме, степень защиты IP20"
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/software-and-applications": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Перечень перечень программного обеспечения, языков программирования, их фреймворков и библиотек, используемых для выполнения задач",
+              "examples": [
+                [
+                  "Betaflight",
+                  "Matek CRSF",
+                  "gcc"
+                ]
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/equipment-and-tools": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Перечень инструментов и оборудования, используемых для выполнения задач",
+              "examples": [
+                [
+                  "3D-принтер Prusa i3 MK3s",
+                  "Напильник"
+                ]
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/used-materials": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Перечень материалов, используемых для выполнения задач",
+              "examples": [
+                [
+                  "Брезент"
+                ]
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/documentation-and-legislative-acts": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Перечень документации и законодательных актов, используемых для выполнения задач",
+              "examples": [
+                [
+                  "УК РФ"
+                ]
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/emergency-situations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Нештатные ситуации по участникам",
+              "examples": [
+                [
+                  "Падение дрона"
+                ],
+                [
+                  "Врезался в препятствие"
+                ]
+              ]
+            },
+            "https://id.2035.university/xapi/extension/uav/complicating-circumstances": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Осложняющие полет обстоятельства",
+              "examples": [
+                [
+                  "Стеснённое пространство"
+                ],
+                [
+                  "ЛЭП под напряжением",
+                  "Михалыч"
+                ]
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "BestResultMinMaxSchema": {
+      "type": "object",
+      "properties": {
+        "bestResultSelector": {
+          "type": "string",
+          "enum": [
+            "min",
+            "max"
+          ]
+        }
+      },
+      "required": [
+        "bestResultSelector"
+      ]
+    },
+    "ScoreSchema": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BestResultMinMaxSchema"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "min": {
+              "type": "integer"
+            },
+            "max": {
+              "type": "integer"
+            },
+            "unit": {
+              "type": "string",
+              "const": "баллы"
+            }
+          },
+          "required": [
+            "score",
+            "min",
+            "max",
+            "unit"
+          ]
+        }
+      ]
+    },
+    "RankSchema": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BestResultMinMaxSchema"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer"
+            },
+            "min": {
+              "type": "integer"
+            },
+            "max": {
+              "type": "integer"
+            },
+            "unit": {
+              "type": "string",
+              "const": "место"
+            }
+          },
+          "required": [
+            "score",
+            "min",
+            "max",
+            "unit"
+          ]
+        }
+      ]
+    },
+    "DurationSchema": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BestResultMinMaxSchema"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "string",
+              "format": "duration"
+            },
+            "min": {
+              "type": "string",
+              "format": "duration"
+            },
+            "max": {
+              "type": "string",
+              "format": "duration"
+            }
+          }
+        }
+      ]
+    },
+    "PercentsSchema": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BestResultMinMaxSchema"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "min": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "max": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "unit": {
+              "type": "string",
+              "const": "проценты"
+            }
+          },
+          "required": [
+            "score",
+            "min",
+            "max",
+            "unit"
+          ]
+        }
+      ]
+    },
+    "TextSchema": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string",
+          "const": "текст"
+        },
+        "bestResultSelector": {
+          "type": "string",
+          "const": "none"
+        }
+      },
+      "required": [
+        "score",
+        "unit",
+        "bestResultSelector"
+      ]
+    },
+    "YesNoSchema": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BestResultMinMaxSchema"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "scope": {
+              "type": "boolean"
+            },
+            "unit": {
+              "type": "string",
+              "const": "да-нет"
+            }
+          },
+          "required": [
+            "score",
+            "unit"
+          ]
+        }
+      ]
+    },
+    "NumberSchema": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/BestResultMinMaxSchema"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "scope": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string"
+            },
+            "min": {
+              "type": "number"
+            },
+            "max": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "score",
+            "unit",
+            "min",
+            "max"
+          ]
+        }
+      ]
+    },
+    "CountSchema": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/NumberSchema"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "scope": {
+              "type": "integer"
+            },
+            "unit": {
+              "type": "string",
+              "enum": [
+                "число"
+              ]
+            },
+            "min": {
+              "type": "integer"
+            },
+            "max": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "score",
+            "unit",
+            "min",
+            "max"
+          ]
+        }
+      ]
+    },
+    "DimensionSchema": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/NumberSchema"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "unit": {
+              "type": "string",
+              "enum": [
+                "мм",
+                "см",
+                "дм",
+                "м",
+                "км"
+              ]
+            }
+          },
+          "required": [
+            "unit"
+          ]
+        }
+      ]
+    },
+    "WeightSchema": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/NumberSchema"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "unit": {
+              "type": "string",
+              "enum": [
+                "г",
+                "кг"
+              ]
+            }
+          },
+          "required": [
+            "unit"
+          ]
+        }
+      ]
+    },
+    "SpeedSchema": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/NumberSchema"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "unit": {
+              "type": "string",
+              "enum": [
+                "км/ч",
+                "м/с"
+              ]
+            }
+          },
+          "required": [
+            "unit"
+          ]
+        }
+      ]
+    }
+  }
+}

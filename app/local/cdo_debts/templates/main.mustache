@@ -1,0 +1,15 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link {{active_2}}" href="{{url}}?type=2">{{#str}} academic_debts, local_cdo_debts {{/str}}</a>
+    </li>
+    {{#show_library}}
+    <li class="nav-item">
+        <a class="nav-link {{active_1}}" href="{{url}}?type=1" >{{#str}} library_debts, local_cdo_debts {{/str}}</a>
+    </li>
+    {{/show_library}}
+    {{#show_finance}}
+    <li class="nav-item">
+        <a class="nav-link {{active_3}}" href="{{url}}?type=3">{{#str}} financial_debts, local_cdo_debts {{/str}}</a>
+    </li>
+    {{/show_finance}}
+</ul>

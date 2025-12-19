@@ -1,0 +1,62 @@
+<div id="cdoNotificationCarousel" class="carousel slide" data-ride="carousel">
+    {{#notifications_count}} {{! Only show carousel if there are notifications }}
+    {{! Indicators }}
+        <ol class="carousel-indicators">
+            {{{notifcations}}}
+            {{#notifications}}
+
+                <li data-target="#cdoNotificationCarousel" data-slide-to="{{notification-idx}}"
+                    class="{{#notification-first}}active{{/notification-first}}"></li>
+            {{/notifications}}
+        </ol>
+
+        {{! Wrapper for slides }}
+        <div class="carousel-inner">
+            {{#notifications}}
+                <div class="carousel-item {{#notification-first}}active{{/notification-first}}">
+                    <!-- <div class="carousel-item active">-->
+                    <div class="p-5"> {{! Padding inside item }}
+                        <div class="row">
+                            <div class="col-sm-8 bold ">
+                                <span class="pl-5">{{header}}</span>
+                            </div>
+                            <div class="col-sm-4 text-right pr-3">
+                                <small class="pr-5">{{date}}</small> {{! Made date smaller }}
+                            </div>
+                        </div>
+                        <div class="row pt-2">
+                            <div class="col-12">
+                                <div class="pl-4">
+                                    {{{body_message}}}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/notifications}}
+        </div>
+
+        {{! Controls - Using button tags instead of anchors }}
+        <button class="carousel-control-prev not-space-btn" type="button" data-target="#cdoNotificationCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">{{#str}}previous{{/str}}</span> {{! Moodle string }}
+        </button>
+        <button class="carousel-control-next not-space-btn" type="button" data-target="#cdoNotificationCarousel" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">{{#str}}next{{/str}}</span> {{! Moodle string }}
+        </button>
+    {{/notifications_count}}
+    {{^notifications_count}}
+    {{! Optional: Message when there are no notifications }}
+        <div class="text-center p-3">{{#str}} nonotifications, block_cdo_notification {{/str}}</div>
+    {{/notifications_count}}
+</div>
+
+<style>
+    .not-space-btn {
+        opacity: 0.41;
+        border: none;
+        background: white;
+    }
+</style>

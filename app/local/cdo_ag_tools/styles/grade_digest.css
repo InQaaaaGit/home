@@ -1,0 +1,272 @@
+/**
+ * Стили для дайджеста оценок
+ *
+ * @package    local_cdo_ag_tools
+ * @copyright  2024
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+/* Контейнер дайджеста */
+.grade-digest-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.grade-digest-container h2 {
+    color: #1177d1;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1177d1;
+    padding-bottom: 10px;
+}
+
+/* Информация о пользователе */
+.digest-user-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #1177d1;
+}
+
+.user-fullname {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.digest-period {
+    color: #666;
+    font-size: 0.95em;
+    margin: 0;
+}
+
+/* Блок статистики */
+.grade-digest-statistics {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grade-digest-statistics h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: white;
+}
+
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-item {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.stat-label {
+    font-size: 0.9em;
+    opacity: 0.9;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Блок курсов */
+.grade-digest-courses {
+    margin-top: 30px;
+}
+
+.grade-digest-courses > h3 {
+    color: #333;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.course-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.course-title {
+    color: #1177d1;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.course-title a {
+    color: #1177d1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.course-title a:hover {
+    color: #0d5aa7;
+    text-decoration: underline;
+}
+
+/* Таблица оценок */
+.grade-digest-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.grade-digest-table thead {
+    background-color: #f5f5f5;
+}
+
+.grade-digest-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+    border-bottom: 2px solid #ddd;
+}
+
+.grade-digest-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.grade-digest-table tr:last-child td {
+    border-bottom: none;
+}
+
+.grade-digest-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Ссылки на модули в таблице */
+.grade-digest-table a {
+    color: #1177d1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.grade-digest-table a:hover {
+    color: #0d5aa7;
+    text-decoration: underline;
+}
+
+.grade-digest-table a:visited {
+    color: #7952b3;
+}
+
+/* Иконка внешней ссылки (открывается в новой вкладке) */
+.grade-digest-table a[target="_blank"]::after {
+    content: " ↗";
+    font-size: 0.85em;
+    opacity: 0.6;
+    margin-left: 3px;
+}
+
+/* Форматирование оценок */
+.grade-value {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.grade-excellent {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.grade-good {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.grade-satisfactory {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.grade-poor {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Алерт для отсутствия оценок */
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .grade-digest-container {
+        padding: 10px;
+    }
+
+    .statistics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-digest-table {
+        font-size: 0.9em;
+    }
+
+    .grade-digest-table th,
+    .grade-digest-table td {
+        padding: 8px;
+    }
+
+    .course-section {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grade-digest-container h2 {
+        font-size: 1.3em;
+    }
+
+    .grade-digest-statistics h3 {
+        font-size: 1.2em;
+    }
+
+    .stat-value {
+        font-size: 1.5em;
+    }
+
+    .grade-digest-table {
+        font-size: 0.85em;
+    }
+}
+

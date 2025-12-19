@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="local/videoprogress/db" VERSION="20240315" COMMENT="XMLDB file for local_videoprogress plugin">
+    <TABLES>
+        <TABLE NAME="local_videoprogress" COMMENT="Stores video progress information">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+                <FIELD NAME="cmid" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Course module ID"/>
+                <FIELD NAME="videoid" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="Video identifier"/>
+                <FIELD NAME="progress" TYPE="float" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="Progress percentage (0-100)"/>
+                <FIELD NAME="segments" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="JSON array of watched segments [[start, end], ...]"/>
+                <FIELD NAME="duration" TYPE="float" NOTNULL="false" DEFAULT="0" SEQUENCE="false" COMMENT="Total video duration in seconds"/>
+                <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Time when the record was created"/>
+                <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="Time when the record was last modified"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+                <KEY NAME="userid" TYPE="foreign" FIELDS="userid" REFTABLE="user" REFFIELDS="id"/>
+                <KEY NAME="cmid" TYPE="foreign" FIELDS="cmid" REFTABLE="course_modules" REFFIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="user-video" UNIQUE="true" FIELDS="userid, cmid, videoid"/>
+            </INDEXES>
+        </TABLE>
+    </TABLES>
+</XMLDB> 

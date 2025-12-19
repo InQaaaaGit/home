@@ -1,0 +1,42 @@
+<ul class="nav nav-tabs nav-justified" id="academic_progress_semesters" role="tablist">
+    {{#progress}}
+        {{#attestation_not_empty}}
+        <li class="nav-item" role="presentation">
+            <a
+                    class="nav-link {{active}}"
+                    id="{{order}}{{gradebook}}-tab"
+                    data-toggle="tab"
+                    href="#nav-{{order}}{{gradebook}}" role="tab"
+                    aria-controls="{{order}}{{gradebook}}"
+                    aria-selected="true">
+                {{semester_name}}
+            </a>
+        </li>
+        {{/attestation_not_empty}}
+    {{/progress}}
+</ul>
+
+<div class="tab-content" id="nav_tab_content_academic_progress_semesters">
+    {{#progress}}
+        <div class="tab-pane fade {{show}} {{active}}" id="nav-{{order}}{{gradebook}}" role="tabpanel"
+             aria-labelledby="ap{{order}}{{gradebook}}">
+            {{#attestation_not_empty}}
+                {{#have_practice}}
+                    {{> local_cdo_mto/components/table_academic_progress_practice}}
+                {{/have_practice}}
+                {{^have_practice}}
+                    {{#have_vkr}}
+                        {{> local_cdo_mto/components/table_academic_progress_vkr}}
+                    {{/have_vkr}}
+                    {{^have_vkr}}
+                        {{> local_cdo_mto/components/table_academic_progress}}
+                    {{/have_vkr}}
+                {{/have_practice}}
+            {{/attestation_not_empty}}
+            {{^attestation_not_empty}}
+                <div class="alert-warning">Курсовых проектов нет</div>
+            {{/attestation_not_empty}}
+        </div>
+
+    {{/progress}}
+</div>

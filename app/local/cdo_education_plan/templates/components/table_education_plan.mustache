@@ -1,0 +1,30 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">{{#str}} numbers_orders, local_cdo_education_plan {{/str}}</th>
+        <th scope="col">{{#str}} recordtype, local_cdo_education_plan {{/str}}</th>
+        <th scope="col">{{#str}} discipline, local_cdo_education_plan {{/str}}</th>
+        <th scope="col">{{#str}} formcontrol, local_cdo_education_plan {{/str}}</th>
+        <th scope="col">{{#str}} summary, local_cdo_education_plan {{/str}}</th>
+        <th scope="col">{{#str}} lection, local_cdo_education_plan {{/str}}</th>
+        <th scope="col">{{#str}} practice, local_cdo_education_plan {{/str}}</th>
+        <th scope="col">{{#str}} labaratory, local_cdo_education_plan {{/str}}</th>
+        <th scope="col">{{#str}} selflearning, local_cdo_education_plan {{/str}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#disciplines}}
+        <tr>
+            <td>{{order}}</td>
+            <td>{{discipline.recordtype}}</td>
+            <td>{{discipline.name}}</td>
+            <td>{{#formcontrol}}{{name}}<br>{{/formcontrol}}</td>
+            <td>{{summary}}</td>
+            <td>{{lection}}</td>
+            <td>{{practice}}</td>
+            <td>{{labaratory}}</td>
+            <td>{{selflearning}}</td>
+        </tr>
+    {{/disciplines}}
+    </tbody>
+</table>

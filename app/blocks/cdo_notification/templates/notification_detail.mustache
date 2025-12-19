@@ -1,0 +1,28 @@
+<div class="notification-detail-container">
+    <div class="notification-detail-header">
+        <div class="notification-detail-meta">
+            <div class="notification-detail-date">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                {{{date}}}
+            </div>
+            <div class="notification-detail-id">
+                <i class="fa fa-hashtag" aria-hidden="true"></i>
+                {{{notificationidx}}}
+            </div>
+        </div>
+    </div>
+    <div class="notification-detail-content">
+        <h1 class="notification-detail-title">
+            {{{header}}}
+        </h1>
+        <div class="notification-detail-body">
+            {{{body_message}}}
+        </div>
+    </div>
+    <div class="notification-detail-footer">
+        <a href="{{{backurl}}}" class="btn btn-secondary">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            {{#str}}backtolist, block_cdo_notification{{/str}}
+        </a>
+    </div>
+</div> 

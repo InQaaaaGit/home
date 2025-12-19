@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Демо: Плагин доступности для слабовидящих</title>
+    <link rel="stylesheet" href="plugins/dist/css/bvi.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .demo-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .demo-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        .instructions {
+            background-color: #d1ecf1;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .instructions h3 {
+            color: #0c5460;
+            margin-top: 0;
+        }
+        .instructions ol {
+            margin: 10px 0;
+        }
+        .instructions li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Демонстрация плагина доступности для слабовидящих</h1>
+        
+        <div class="instructions">
+            <h3>📋 Как использовать плагин:</h3>
+            <ol>
+                <li><strong>Найдите кнопку "Доступность"</strong> в правом верхнем углу страницы (синяя кнопка с глазом 👁️)</li>
+                <li><strong>Нажмите на кнопку</strong> - откроется панель настроек</li>
+                <li><strong>Настройте параметры:</strong>
+                    <ul>
+                        <li>Выберите цветовую схему</li>
+                        <li>Измените размер шрифта</li>
+                        <li>Настройте отображение изображений</li>
+                        <li>Включите синтез речи</li>
+                    </ul>
+                </li>
+                <li><strong>Нажмите "Применить"</strong> для сохранения настроек</li>
+            </ol>
+        </div>
+
+        <div class="highlight">
+            <strong>💡 Совет:</strong> Если кнопка не появилась, обновите страницу (F5) или проверьте консоль браузера (F12).
+        </div>
+
+        <div class="demo-section">
+            <h2>📝 Пример текста</h2>
+            <p>Это демонстрационный текст для проверки работы плагина доступности. Вы можете изменить размер шрифта, цветовую схему и другие параметры с помощью панели настроек.</p>
+            
+            <h3>Заголовок третьего уровня</h3>
+            <p>Плагин автоматически масштабирует заголовки в соответствии с выбранным размером шрифта. Это обеспечивает правильные пропорции текста.</p>
+            
+            <ul>
+                <li>Первый элемент списка</li>
+                <li>Второй элемент списка</li>
+                <li>Третий элемент списка</li>
+            </ul>
+        </div>
+
+        <div class="demo-section">
+            <h2>🖼️ Пример изображения</h2>
+            <p>Это тестовое изображение. С помощью плагина вы можете:</p>
+            <ul>
+                <li>Скрыть все изображения</li>
+                <li>Показать изображения в оттенках серого</li>
+                <li>Оставить изображения как есть</li>
+            </ul>
+            <img src="https://via.placeholder.com/400x200/007bff/ffffff?text=Тестовое+изображение" alt="Демонстрационное изображение" class="demo-image bvi-img">
+        </div>
+
+        <div class="demo-section">
+            <h2>🔊 Синтез речи</h2>
+            <div class="bvi-speech">
+                <p>Этот текст может быть озвучен синтезатором речи. Включите функцию синтеза речи в настройках плагина, чтобы услышать этот текст.</p>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🎨 Цветовые схемы</h2>
+            <p>Плагин поддерживает несколько цветовых схем:</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 20px 0;">
+                <div style="background: white; color: black; padding: 10px; border: 1px solid #ccc; text-align: center;">Белая схема</div>
+                <div style="background: black; color: white; padding: 10px; border: 1px solid #ccc; text-align: center;">Черная схема</div>
+                <div style="background: #9dd1ff; color: #063462; padding: 10px; border: 1px solid #ccc; text-align: center;">Синяя схема</div>
+                <div style="background: #f7f3d6; color: #4d4b43; padding: 10px; border: 1px solid #ccc; text-align: center;">Коричневая схема</div>
+                <div style="background: #3b2716; color: #a9e44d; padding: 10px; border: 1px solid #ccc; text-align: center;">Зеленая схема</div>
+            </div>
+        </div>
+
+        <div class="highlight">
+            <strong>✅ Готово!</strong> Теперь вы знаете, как использовать плагин доступности. Попробуйте различные настройки и найдите наиболее комфортные для вас параметры.
+        </div>
+    </div>
+
+    <!-- Подключение BVI плагина с правильными путями -->
+    <script src="plugins/dist/js/bvi.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Инициализируем BVI плагин
+            if (typeof isvek !== 'undefined' && isvek.Bvi) {
+                new isvek.Bvi({
+                    target: '.bvi-open',
+                    fontSize: 16,
+                    theme: 'white',
+                    images: 'grayscale',
+                    letterSpacing: 'normal',
+                    lineHeight: 'normal',
+                    speech: true,
+                    fontFamily: 'arial',
+                    builtElements: false,
+                    panelFixed: true,
+                    panelHide: false,
+                    reload: false,
+                    lang: 'ru-RU'
+                });
+                console.log('BVI плагин инициализирован на демо-странице');
+            } else {
+                console.error('BVI плагин не найден');
+            }
+        });
+    </script>
+</body>
+</html>

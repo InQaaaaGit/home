@@ -1,0 +1,19 @@
+{{!
+    vim: et ts=2 sts=2 sw=2 syntax=mustache
+    @template: local_cdo_unti2035bas/streams_control
+
+    Control widget for streams
+}}
+<form class="streams_control" {{!
+  }}data-uniqid="{{uniqid}}" {{!
+  }}data-table="{{table_uniqid}}"{{!
+  }}>
+  <fieldset disabled>
+    <button class="btn btn-primary create-stream">{{#str}} streamcreate, local_cdo_unti2035bas {{/str}}</button>
+  </fieldset>
+</form>
+{{#js}}
+require(['local_cdo_unti2035bas/streams_control'], function(sc) {
+  sc.init("{{uniqid}}");
+});
+{{/js}}

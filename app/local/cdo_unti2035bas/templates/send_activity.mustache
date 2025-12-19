@@ -1,0 +1,171 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Send activity template.
+
+    @copyright  2024 CDO UNTI2035BAS
+    @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+}}
+
+<div class="send-activity-container">
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4>{{#str}}sendactivitytitle, local_cdo_unti2035bas{{/str}}</h4>
+        </div>
+        <div class="card-body">
+            {{#stream_info}}
+            <div class="stream-info mb-3">
+                <h5>{{#str}}streaminfo, local_cdo_unti2035bas{{/str}}</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><strong>{{#str}}lrid, local_cdo_unti2035bas{{/str}}:</strong> {{lrid}}</p>
+                        <p><strong>{{#str}}parentcourseid, local_cdo_unti2035bas{{/str}}:</strong> {{parent_course_id}}</p>
+                        <p><strong>{{#str}}flowid, local_cdo_unti2035bas{{/str}}:</strong> {{flow_id}}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>{{#str}}courseid, local_cdo_unti2035bas{{/str}}:</strong> {{course_id}}</p>
+                        <p><strong>{{#str}}groupid, local_cdo_unti2035bas{{/str}}:</strong> {{group_id}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/stream_info}}
+
+            {{#processing_completed}}
+            <div class="results-summary alert alert-info mb-3">
+                <h5>{{#str}}sendresults, local_cdo_unti2035bas{{/str}}</h5>
+                <div class="row">
+                    <div class="col-md-3">
+                        <strong>{{#str}}usersprocessed, local_cdo_unti2035bas{{/str}}:</strong> {{users_count}}
+                    </div>
+                    <div class="col-md-3">
+                        <strong>{{#str}}successfulsends, local_cdo_unti2035bas{{/str}}:</strong> 
+                        <span class="text-success">{{successful_count}}</span>
+                    </div>
+                    <div class="col-md-3">
+                        <strong>{{#str}}totalerrors, local_cdo_unti2035bas{{/str}}:</strong> 
+                        <span class="text-danger">{{failed_count}}</span>
+                    </div>
+                    <div class="col-md-3">
+                        <strong>С UNTI ID:</strong> {{total_with_unti_id}}
+                    </div>
+                </div>
+            </div>
+            {{/processing_completed}}
+
+            {{#has_users}}
+            <div class="users-section">
+                <h5>{{#str}}usersinfo, local_cdo_unti2035bas{{/str}}</h5>
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <thead>
+                            <tr>
+                                <th>{{#str}}user, local_cdo_unti2035bas{{/str}}</th>
+                                <th>{{#str}}email, local_cdo_unti2035bas{{/str}}</th>
+                                <th>UNTI ID</th>
+                                <th>{{#str}}sendingdata, local_cdo_unti2035bas{{/str}}</th>
+                                <th>Результат</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#users}}
+                            <tr class="{{#send_status}}send-status-{{send_status}}{{/send_status}}">
+                                <td>{{fullname}}</td>
+                                <td>{{email}}</td>
+                                <td>
+                                    {{#has_unti_id}}
+                                        <span class="badge badge-success">{{unti_id}}</span>
+                                    {{/has_unti_id}}
+                                    {{^has_unti_id}}
+                                        <span class="badge badge-warning">{{#str}}untiidnotfound, local_cdo_unti2035bas{{/str}}</span>
+                                    {{/has_unti_id}}
+                                </td>
+                                <td>
+                                    {{#send_status_success}}
+                                        <span class="badge badge-success">{{#str}}completedsuccessfully, local_cdo_unti2035bas{{/str}}</span>
+                                    {{/send_status_success}}
+                                    {{#send_status_error}}
+                                        <span class="badge badge-danger">{{#str}}processingfailed, local_cdo_unti2035bas{{/str}}</span>
+                                    {{/send_status_error}}
+                                    {{#send_status_no_unti_id}}
+                                        <span class="badge badge-warning">{{#str}}untiidnotfound, local_cdo_unti2035bas{{/str}}</span>
+                                    {{/send_status_no_unti_id}}
+                                </td>
+                                <td>
+                                    <small class="text-muted">{{send_message}}</small>
+                                </td>
+                            </tr>
+                            {{/users}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {{/has_users}}
+
+            {{^has_users}}
+            <div class="alert alert-warning">
+                <h5>{{#str}}nousersfound, local_cdo_unti2035bas{{/str}}</h5>
+                <p>Не найдено пользователей для отправки данных активности.</p>
+            </div>
+            {{/has_users}}
+
+            {{#failed_details}}
+            {{#.}}
+            <div class="failed-details mt-4">
+                <h5 class="text-danger">{{#str}}failedusers, local_cdo_unti2035bas{{/str}}</h5>
+                <div class="alert alert-danger">
+                    <h6>Детали ошибок:</h6>
+                    <ul>
+                        {{#failed_details}}
+                        <li>
+                            <strong>UNTI ID:</strong> {{unti_id}}, 
+                            <strong>Object ID:</strong> {{object_id}}, 
+                            <strong>{{#str}}error, local_cdo_unti2035bas{{/str}}:</strong> {{error}}
+                        </li>
+                        {{/failed_details}}
+                    </ul>
+                </div>
+            </div>
+            {{/.}}
+            {{/failed_details}}
+
+            <div class="navigation-buttons mt-4">
+                <a href="{{streams_url}}" class="btn btn-secondary">
+                    <i class="fa fa-arrow-left"></i> {{#str}}backtomain, local_cdo_unti2035bas{{/str}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.send-activity-container .table {
+    font-size: 0.9em;
+}
+
+.send-activity-container .send-status-success {
+    background-color: #d4edda;
+}
+
+.send-activity-container .send-status-error {
+    background-color: #f8d7da;
+}
+
+.send-activity-container .send-status-no_unti_id {
+    background-color: #fff3cd;
+}
+
+.send-activity-container .badge {
+    font-size: 0.8em;
+}
+
+.send-activity-container .results-summary {
+    border: 1px solid #bee5eb;
+}
+
+.send-activity-container .stream-info {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+}
+</style> 

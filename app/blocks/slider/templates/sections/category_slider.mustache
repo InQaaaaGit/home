@@ -1,0 +1,18 @@
+<h2>{{{name_category_open_course}}}</h2>
+<div class="description-mainpage">
+    {{{description_open_courses}}}
+</div>
+<div class="technical-library">
+    {{#open_category}}
+        <div>
+            <a href="{{href}}" class="technical-library__item">
+                <img src="{{url}}" alt=" " class="technical-library__image">
+                <div class="technical-library__bg">
+                    <p class="technical-library__name">
+                        {{name}}
+                    </p>
+                </div>
+            </a>
+        </div>
+    {{/open_category}}
+</div>

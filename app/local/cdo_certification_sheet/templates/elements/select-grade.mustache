@@ -1,0 +1,26 @@
+{{#is_edit}}
+    <select class="form-control change-grade-sheet"
+            id="{{guid}}"
+            data-save-grade="{{grade_guid}}"
+            data-student-guid="{{student_guid}}"
+            data-sheet-guid="{{sheet_guid}}"
+    >
+        {{#grades}}
+            <option value="{{guid}}" {{#selected}}selected{{/selected}}>
+                {{value}}
+            </option>
+        {{/grades}}
+    </select>
+{{/is_edit}}
+{{^is_edit}}
+    {{#grades}}
+        {{#selected}}
+            <span class="change-grade-sheet"
+                  data-save-grade="{{grade_guid}}"
+                  data-student-guid="{{student_guid}}"
+                  data-sheet-guid="{{sheet_guid}}">
+                {{value}}
+            </span>
+        {{/selected}}
+    {{/grades}}
+{{/is_edit}}

@@ -1,0 +1,10 @@
+{{!
+    vim: et ts=2 sts=2 sw=2 syntax=mustache
+    @template: local_cdo_unti2035bas/fact_edit_control
+}}
+<div id="container-fact-edit-add-ext-form-{{factid}}"></div>
+{{#js}}
+require(['local_cdo_unti2035bas/fact_edit_control'], function(CTL) {
+  new CTL({{factid}}, "{{tableid}}");
+});
+{{/js}}

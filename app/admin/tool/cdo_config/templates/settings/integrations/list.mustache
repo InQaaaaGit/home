@@ -1,0 +1,35 @@
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">{{#str}} col_name, tool_cdo_config {{/str}}</th>
+            <th scope="col">{{#str}} col_method, tool_cdo_config {{/str}}</th>
+            <th scope="col">{{#str}} col_code, tool_cdo_config {{/str}}</th>
+            <th scope="col">{{#str}} col_actions, tool_cdo_config {{/str}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{^list}}
+            <tr>
+                <th scope="row" rowspan="5">{{#str}} no_records, tool_cdo_config {{/str}}</th>
+            </tr>
+        {{/list}}
+        {{#list}}
+            <tr>
+                <th scope="row">{{id}}</th>
+                <td>{{name}}</td>
+                <td>{{method}}</td>
+                <td>{{code}}</td>
+                <td>
+                    <a href="{{{url_edit}}}">{{#str}} act_update, tool_cdo_config {{/str}}</a>
+                    <a href="{{{url_delete}}}" style="color: red" class="cdo-confirm-delete">{{#str}} act_delete, tool_cdo_config {{/str}}</a>
+                </td>
+            </tr>
+        {{/list}}
+        </tbody>
+    </table>
+</div>
+<div style="text-align: end">
+    <a href="{{url_create}}">{{#str}} act_create, tool_cdo_config {{/str}}</a>
+</div>

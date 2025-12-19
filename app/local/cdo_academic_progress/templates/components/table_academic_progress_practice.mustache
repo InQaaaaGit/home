@@ -1,0 +1,29 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">{{#str}} practice, local_cdo_academic_progress {{/str}}</th>
+        <th scope="col">{{#str}} semester, local_cdo_academic_progress {{/str}}</th>
+        <th scope="col">{{#str}} practice_place, local_cdo_academic_progress {{/str}}</th>
+        <th scope="col">{{#str}} practice_hours, local_cdo_academic_progress {{/str}}</th>
+        <th scope="col">{{#str}} practice_mark, local_cdo_academic_progress {{/str}}</th>
+        <th scope="col">{{#str}} practice_date, local_cdo_academic_progress {{/str}}</th>
+        <th scope="col">{{#str}} practice_manager, local_cdo_academic_progress {{/str}}</th>
+        {{#attestation}}
+            {{#course_work_show}}<th scope="col">{{#str}} course_work, local_cdo_academic_progress {{/str}}</th>{{/course_work_show}}
+        {{/attestation}}
+    </tr>
+    </thead>
+    <tbody>
+    {{#attestation}}
+        <tr>
+            <td>{{discipline.name}}</td>
+            <td>{{semester}}</td>
+            <td>{{place_practice}}</td>
+            <td>{{hours}}</td>
+            <td>{{mark}}</td>
+            <td>{{date}}</td>
+            <td>{{manager_practice}}</td>
+        </tr>
+    {{/attestation}}
+    </tbody>
+</table>

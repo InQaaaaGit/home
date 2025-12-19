@@ -1,0 +1,27 @@
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Предмет</th>
+      <th scope="col">Оценка</th>
+      <th scope="col">Учитель</th>
+      <th scope="col">Учебный год</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#progress}}
+      <tr class="{{class}}">
+        <td>{{discipline}}</td>
+        <td >{{grade}}</td>
+        <td>{{teacher}}</td>
+        <td>{{year}}</td>
+      </tr>
+    {{/progress}}
+    </tbody>
+  </table>
+</div>
+<style>
+  .debt {
+    color: red;
+  }
+</style>

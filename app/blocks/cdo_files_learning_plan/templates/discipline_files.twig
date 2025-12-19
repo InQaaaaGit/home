@@ -1,0 +1,63 @@
+{% set i = 0 %}
+{% set j = 0 %}
+<div id="pills-rpd"
+     class="tab-pane fade {% if cur_pill == 3 %} active show {% endif %}"
+     role="tabpanel"
+     aria-labelledby="pills-link-tab"
+>
+    <div class="row my-0">
+        <div class="col-2">
+            <div class="list-group mt-0" role="tablist">
+                {% for keysec,section in sections %}
+                    <a href="#panel_{{ keysec }}"
+                       id="{{ keysec }}-tab"
+                       class="list-group-item list-group-item-action text-left"
+                       role="tab"
+                       data-toggle="list"
+                       aria-controls="{{ keysec }}"
+                    >{{ section }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="tab-content">
+                {% for keysec,section in sections %}
+                    <div class="tab-pane fade"
+                         id="panel_{{ keysec }}"
+                         role="tabpanel"
+                         aria-labelledby="{{ keysec }}-tab"
+                    >
+                        <div id="accordion_file_{{ j }}" class="accordion ">
+                            {% for key,discs in disciplines %}
+                                <div class="discipline_{{ key }} d-none">
+                                    {% for block,items in discs %}
+                                        <div class="card card--custom">
+                                            <div id="heading_{{ i }}" class="card-header my-3">
+                                                <a class="collapsed collapsed--custom"
+                                                   href="javascript:;"
+                                                   data-toggle="collapse"
+                                                   data-target="#collapse_{{ i }}"
+                                                   aria-controls="collapse{{ i }}"
+                                                >{{ block }}</a>
+                                            </div>
+                                            <div id="collapse_{{ i }}" class="collapse"
+                                                 aria-labelledby="heading_{{ i }}"
+                                                 data-parent="#accordion_file_{{ j }}"
+                                            >
+                                                <div class="card-body px-1 py-1">
+                                                    {% include 'table_discipline.twig' with {i,items,isAuditor,keysec,section} %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% set i = i + 1 %}
+                                    {% endfor %}
+                                </div>
+                            {% endfor %}
+                            {% set j = j + 1 %}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+{
+  "id": "b5ca43b7-081a-430c-9292-05f56fc34eca",
+  "version": "1.0.3",
+  "timestamp": "2023-09-14T20:01:02+03:00",
+  "actor": {
+    "objectType": "Agent",
+    "account": {
+      "homePage": "https://my.2035.university",
+      "name": "11111"
+    }
+  },
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/passed",
+    "display": {
+      "ru-RU": "Прошёл испытание"
+    }
+  },
+  "object": {
+    "id": "16454473-b270-42c2-a407-f37d235c0db7",
+    "objectType": "StatementRef"
+  },
+  "context": {
+    "extensions": {
+      "https://api.2035.university/project": "БАС",
+      "https://api.2035.university/parent_course_id": 12345,
+      "https://api.2035.university/flow_id": 234
+    }
+  },
+  "attachments": [
+    {
+      "usageType": "https://id.2035.university/xapi/attachments/practice-diary",
+      "display": {
+        "ru-RU": "Дневник"
+      },
+      "description": {
+        "ru-RU": "Скан дневника прохождения блока практической подготовки"
+      },
+      "contentType": "application/pdf",
+      "length": 1567163,
+      "fileUrl": "https://s3.dtln.ru/PROVIDER/course/1/practice/media/diary-11111.pdf",
+      "sha2": "71662bd35817bc32c9214911f0c7233f4e415cb8742e95725c54750b1db6b824"
+    }
+  ]
+}

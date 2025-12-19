@@ -1,0 +1,46 @@
+.up-blue {
+    background-color: #0066CC !important;
+}
+
+.up-text-white {
+    color: #FFFFFF !important;
+}
+
+.v-application--wrap {
+    min-height: 100% !important;
+}
+
+.row {
+   /* flex: 0 !important;*/
+    margin: 0 -15px;
+}
+.row--flex {
+    flex: 1 1 auto  !important;
+}
+label.v-label {
+    margin-bottom: 0 !important;
+}
+.row--margin0 {
+    margin: 0;
+}
+.archive-border {
+    border-bottom: 2px solid black;
+}
+.wo-underline {
+    text-decoration: none !important;
+}
+
+.text--file-link {
+    text-align: center;
+    width: 180px;
+}
+
+.text--file-link.text--file-link-220 {
+    width: 200px;
+}
+.w-220px {
+    width: 200px;
+}
+.v-data-table__wrapper > table > tbody > tr:hover {
+    cursor: pointer;
+}

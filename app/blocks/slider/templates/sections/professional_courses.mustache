@@ -1,0 +1,26 @@
+<h2>{{all_courses_head}}</h2>
+<div class="description-mainpage">
+    {{{all_courses_description}}}
+</div>
+<div class="technical-library">
+    {{#all_courses}}
+        <div>
+            <a href="{{href}}" class="technical-library__item">
+                <img src="{{url}}" alt=" " class="technical-library__image">
+                <div class="technical-library__bg">
+                    <p class="technical-library__name">
+                        {{name}}
+                    </p>
+                </div>
+            </a>
+        </div>
+    {{/all_courses}}
+</div>
+<div class="row">
+    <div class="col-md-12 mt-2 text-center mb-4">
+        <a class="btn btn-primary"
+           href="/course/index.php?categoryid={{all_courses_link}}">
+        {{all_courses_link_name}}
+        </a>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/cdo_seamless_transition/db" VERSION="20181030" COMMENT="XMLDB file for Moodle blocks/cdo_seamless_transition"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+    <TABLES>
+        <TABLE NAME="cdo_seamless_transition" COMMENT="">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="field" TYPE="char" NOTNULL="true" LENGTH="100" SEQUENCE="false" COMMENT="Ключ"/>
+                <FIELD NAME="value" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Значение"/>
+                <FIELD NAME="deleted" TYPE="int" LENGTH="1" NOTNULL="false" SEQUENCE="false" COMMENT="Помечено на удаление"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="field" UNIQUE="false" FIELDS="field"/>
+            </INDEXES>
+        </TABLE>
+    </TABLES>
+</XMLDB>

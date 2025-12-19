@@ -1,0 +1,24 @@
+<ul class="nav nav-tabs nav-justified" id="teacher_schedule" role="tablist">
+    {{#schedule_teacher}}
+        <li class="nav-item" role="presentation">
+            <a
+                    class="nav-link {{active}}"
+                    id="{{order}}-tab-teacher"
+                    data-toggle="tab"
+                    href="#nav-{{order}}-teacher" role="tab"
+                    aria-controls="{{order}}-teacher"
+                    aria-selected="true">
+                {{date}} | {{order_name}} | {{count_lessons}}
+            </a>
+        </li>
+    {{/schedule_teacher}}
+</ul>
+
+<div class="tab-content" id="nav_tab_content_teacher_schedule">
+    {{#schedule_teacher}}
+        <div class="tab-pane fade {{show}} {{active}}" id="nav-{{order}}-teacher" role="tabpanel"
+             aria-labelledby="ap{{order}}-teacher">
+            {{> block_cdo_schedule/components/table_schedule_teacher}}
+        </div>
+    {{/schedule_teacher}}
+</div>

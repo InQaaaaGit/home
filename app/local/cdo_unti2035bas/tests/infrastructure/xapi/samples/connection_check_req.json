@@ -1,0 +1,18 @@
+{
+  "version": "1.0.3",
+  "timestamp": "2025-04-15T12:34:13+00:00",
+  "actor": {
+    "objectType": "Agent",
+    "account": {
+      "homePage": "https://my.2035.university",
+      "name": "0"
+    }
+  },
+  "verb": {
+    "id": "https://api.2035.university/connection.check"
+  },
+  "object": {
+    "id": "https://api.2035.university/connection.check",
+    "objectType": "Activity"
+  }
+}

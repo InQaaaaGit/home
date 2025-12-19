@@ -1,0 +1,156 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template local_cdo_unti2035bas/send_practice
+
+    Send practice assignments page template
+
+    Context variables required:
+    * stream_info - Information about the stream
+    * users - List of users to process
+    * has_users - Boolean if users exist
+    * lrid - Learning resource ID
+    * back_url - URL to go back
+    * streams_url - URL to streams page
+}}
+
+<div class="practice-send-container">
+    {{#stream_info}}
+    <div class="info-section">
+        <h3>{{#str}}streaminfo, local_cdo_unti2035bas{{/str}}</h3>
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">{{#str}}practiceactivity, local_cdo_unti2035bas{{/str}}</div>
+                <div class="info-value">{{lrid}}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">{{#str}}parentcourseid, local_cdo_unti2035bas{{/str}}</div>
+                <div class="info-value">{{parent_course_id}}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">{{#str}}flowid, local_cdo_unti2035bas{{/str}}</div>
+                <div class="info-value">{{flow_id}}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">{{#str}}courseid, local_cdo_unti2035bas{{/str}}</div>
+                <div class="info-value">{{course_id}}</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">{{#str}}groupid, local_cdo_unti2035bas{{/str}}</div>
+                <div class="info-value">{{group_id}}</div>
+            </div>
+        </div>
+    </div>
+    {{/stream_info}}
+
+    {{#has_users}}
+    <div class="info-section">
+        <h3>{{#str}}usersinfo, local_cdo_unti2035bas{{/str}}</h3>
+        <p>{{#str}}usersprocessed, local_cdo_unti2035bas{{/str}}: <strong>{{users_count}}</strong></p>
+        
+        <div class="user-list">
+            {{#users}}
+            <div class="user-item {{send_status}}">
+                <div class="user-info">
+                    <strong>{{fullname}}</strong> ({{email}})
+                    <br><small>User ID: {{id}}</small>
+                    {{#has_unti_id}}
+                        <br><small>UNTI ID: {{unti_id}}</small>
+                    {{/has_unti_id}}
+                </div>
+                <div class="user-status">
+                    <div class="result-{{send_status}}">
+                        <small>{{send_message}}</small>
+                    </div>
+                </div>
+            </div>
+            {{/users}}
+        </div>
+    </div>
+
+    {{#processing_completed}}
+    <div class="info-section">
+        <h3>{{#str}}sendresults, local_cdo_unti2035bas{{/str}}</h3>
+        
+        <div class="summary-stats">
+            <div class="stat-card">
+                <div class="stat-number">{{successful_count}}</div>
+                <div class="stat-label">{{#str}}successfulsends, local_cdo_unti2035bas{{/str}}</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-number">{{failed_count}}</div>
+                <div class="stat-label">{{#str}}totalerrors, local_cdo_unti2035bas{{/str}}</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-number">{{total_with_unti_id}}</div>
+                <div class="stat-label">{{#str}}totalsent, local_cdo_unti2035bas{{/str}}</div>
+            </div>
+        </div>
+
+        {{#failed_details}}
+        <div class="errors-section">
+            <h4 class="text-danger">{{#str}}failedusers, local_cdo_unti2035bas{{/str}}</h4>
+            <div class="user-list">
+                {{#failed_details}}
+                <div class="user-item error">
+                    <div>
+                        <strong>UNTI ID: {{unti_id}}</strong>
+                        <br><small>Object ID: {{object_id}}</small>
+                    </div>
+                    <div class="result-error">
+                        <small>{{error}}</small>
+                    </div>
+                </div>
+                {{/failed_details}}
+            </div>
+        </div>
+        {{/failed_details}}
+
+        <!-- Уведомление о результате -->
+        {{^failed_count}}
+        <div class="alert alert-success">
+            {{#str}}completedsuccessfully, local_cdo_unti2035bas{{/str}}
+        </div>
+        {{/failed_count}}
+        {{#failed_count}}
+        <div class="alert alert-warning">
+            {{#str}}processingfailed, local_cdo_unti2035bas{{/str}}
+        </div>
+        {{/failed_count}}
+    </div>
+    {{/processing_completed}}
+    {{/has_users}}
+
+    {{^has_users}}
+    <div class="alert alert-warning">
+        {{#str}}nousersfound, local_cdo_unti2035bas{{/str}}
+    </div>
+    {{/has_users}}
+
+    <div class="navigation-section">
+        <button type="button" onclick="history.back()" class="btn btn-outline-secondary">
+            {{#str}}back, core{{/str}}
+        </button>
+        <a href="{{streams_url}}" class="btn btn-secondary">
+            {{#str}}backtomain, local_cdo_unti2035bas{{/str}}
+        </a>
+    </div>
+</div>
+
+ 

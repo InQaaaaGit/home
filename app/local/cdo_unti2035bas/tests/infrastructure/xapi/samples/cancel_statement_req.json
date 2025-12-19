@@ -1,0 +1,47 @@
+{
+  "id": "d2e9a6e3-725d-4b84-8a68-950a672ae3f6",
+  "version": "1.0.3",
+  "timestamp": "2023-09-14T20:01:02+03:00",
+  "actor": {
+    "objectType": "Agent",
+    "account": {
+      "homePage": "https://my.2035.university",
+      "name": "22222"
+    }
+  },
+  "verb": {
+    "id": "http://activitystrea.ms/schema/1.0/cancel",
+    "display": {
+      "ru-RU": "Будет отменено"
+    }
+  },
+  "object": {
+    "id": "67c5e4b0-9099-4e1d-ab88-34c1c24e622b",
+    "objectType": "StatementRef"
+  },
+  "context": {
+    "extensions": {
+      "https://api.2035.university/project": "БАС",
+      "https://api.2035.university/parent_course_id": 12345,
+      "https://api.2035.university/flow_id": 234,
+      "https://api.2035.university/block_num": 0,
+      "https://api.2035.university/module_num": 1,
+      "https://api.2035.university/el_id": "https://PROVIDER.ru/videos/1"
+    }
+  },
+  "attachments": [
+    {
+      "usageType": "https://id.2035.university/xapi/attachments/official-letter",
+      "display": {
+        "ru-RU": "Письмо Провайдера"
+      },
+      "description": {
+        "ru-RU": "Скан официального письма с описанием причин отмены"
+      },
+      "contentType": "image/jpeg",
+      "length": 76471,
+      "fileUrl": "https://s3.objstor.cloud4u.com/kadastr/photo_2025-06-18_01-28-07.jpg",
+      "sha2": "0809892759e88ef618f032c760fa0bd600f13562b76e6f0e8befa12c85546986"
+    }
+  ]
+}

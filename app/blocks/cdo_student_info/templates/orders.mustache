@@ -1,0 +1,41 @@
+<ul class="nav nav-tabs" id="orders" role="tablist">
+  {{#data.gradebooks}}
+    <li class="nav-item">
+      <button class="nav-link {{active}}"
+         id="gb{{id}}"
+         data-toggle="tab"
+         href="#gblink{{id}}"
+         role="tab"
+         aria-controls="acgb{{id}}"
+         aria-selected="true"
+      >
+        {{name}}
+      </button>
+    </li>
+  {{/data.gradebooks}}
+</ul>
+<div class="tab-content" id="orders-content">
+  {{#data.gradebooks}}
+    <div class="tab-pane fade {{show}} {{active}}" id="gblink{{id}}" role="tabpanel" aria-labelledby="gb{{id}}">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">{{#str}} number_order, block_cdo_student_info {{/str}}</th>
+          <th scope="col">{{#str}} order_type, block_cdo_student_info {{/str}}</th>
+          <th scope="col"> {{#str}} date, block_cdo_student_info {{/str}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#data}}
+          <tr>
+            <th>{{number}}</th>
+            <td>{{order_type}}</td>
+            <td>{{date}}</td>
+          </tr>
+        {{/data}}
+        </tbody>
+      </table>
+    </div>
+  {{/data.gradebooks}}
+</div>
+

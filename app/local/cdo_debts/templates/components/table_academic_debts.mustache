@@ -1,0 +1,26 @@
+<table class="table table-striped mt-20">
+    <thead>
+    <th scope="col" class="text-center">
+        {{#str}} semester, local_cdo_debts {{/str}}
+    </th>
+    <th scope="col" class="text-center">
+        {{#str}} study_load_type, local_cdo_debts {{/str}}
+    </th>
+    <th scope="col" class="text-center">
+        {{#str}} discipline, local_cdo_debts {{/str}}
+    </th>
+    <th scope="col" class="text-center">
+        {{#str}} grade_short_name, local_cdo_debts {{/str}}
+    </th>
+    </thead>
+    <tbody>
+    {{#academic_debts}}
+        <tr>
+            <td class="text-center">{{semester}}</td>
+            <td class="text-center">{{study_load_type.name}}</td>
+            <td style="color: #0a78d1" class="text-center ">{{discipline.name}}</td>
+            <td style="color: #8e662e" class="text-center">{{grade_short_name}}</td>
+        </tr>
+    {{/academic_debts}}
+    </tbody>
+</table>

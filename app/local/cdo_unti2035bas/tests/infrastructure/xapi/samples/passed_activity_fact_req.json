@@ -1,0 +1,62 @@
+{
+  "id": "77941234-af77-487d-b267-c83fa521c918",
+  "version": "1.0.3",
+  "timestamp": "2023-09-14T20:01:02+03:00",
+  "actor": {
+    "objectType": "Agent",
+    "account": {
+      "homePage": "https://my.2035.university",
+      "name": "11111"
+    }
+  },
+  "verb": {
+    "id": "http://adlnet.gov/expapi/verbs/passed",
+    "display": {
+      "ru-RU": "Прошёл испытание"
+    }
+  },
+  "object": {
+    "id": "16454473-b270-42c2-a407-f37d235c0db7",
+    "objectType": "StatementRef"
+  },
+  "result": {
+    "score": {
+      "raw": 5,
+      "min": 0,
+      "max": 5,
+      "scaled": 1.0
+    },
+    "success": true,
+    "duration": "PT40S",
+    "extensions": {
+      "https://api.2035.university/attempts_index": 1,
+      "https://api.2035.university/attempts_max": 1,
+      "https://api.2035.university/target": "max"
+    }
+  },
+  "context": {
+    "contextActivities": {
+      "parent": [
+        {
+          "id": "https://PROVIDER.ru/courses/1/practic/modules/1/themes/1/activities/3"
+        }
+      ]
+    },
+    "extensions": {
+      "https://id.2035.university/xapi/extension/method_of_fixation": "Фиксация в LMS",
+      "https://id.2035.university/xapi/extension/id_of_responsible_for_fixation": [
+        "33333",
+        "44444"
+      ],
+      "https://id.2035.university/xapi/extension/role_of_responsible_for_fixation": [
+        "Методист",
+        "Методист"
+      ],
+      "https://api.2035.university/project": "БАС",
+      "https://api.2035.university/parent_course_id": 12345,
+      "https://api.2035.university/flow_id": 234,
+      "https://api.2035.university/module_num": 1,
+      "https://api.2035.university/FD": true
+    }
+  }
+}

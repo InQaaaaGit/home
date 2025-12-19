@@ -1,0 +1,8 @@
+{
+  "require": {
+    "convertapi/convertapi-php": "v3.0.0",
+    "chillerlan/php-qrcode": "5.0.2",
+    "phpoffice/phpspreadsheet": "^4.1"
+
+  }
+}

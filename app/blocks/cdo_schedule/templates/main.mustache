@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <a class="btn btn-primary w-100 mb-4" href="/blocks/cdo_schedule/full_schedule.php">{{#str}} link_to_full_schedule, block_cdo_schedule {{/str}}</a>
+    {{#have_schedule_student}}
+        {{> block_cdo_schedule/components/tab_week}}
+    {{/have_schedule_student}}
+    {{#have_both_schedule}}
+        <hr/>
+        <h2>{{#str}} schedule_teaching_stuff, block_cdo_schedule {{/str}}</h2>
+    {{/have_both_schedule}}
+    {{#have_schedule_teachers}}
+        {{> block_cdo_schedule/components/tab_week_teacher}}
+    {{/have_schedule_teachers}}
+</div>

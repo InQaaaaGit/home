@@ -1,0 +1,70 @@
+<table class="table table-striped text-break">
+    <tbody>
+    <tr>
+        <td>{{#str}} representation, block_cdo_professional_info {{/str}}</td>
+        <td>{{presentation}}</td>
+    </tr>
+    <tr>
+        <td>{{#str}} birthday, block_cdo_professional_info {{/str}}</td>
+        <td>{{birth_date}}</td>
+    </tr>
+    <tr>
+        <td>{{#str}} faculty, block_cdo_professional_info {{/str}}</td>
+        <td>{{faculty.name}}</td>
+    </tr>
+    <tr>
+        <td>{{#str}} department, block_cdo_professional_info {{/str}}</td>
+        <td>{{department.name}}</td>
+    </tr>
+    <tr>
+        <td>{{#str}} employment_contract_end_date, block_cdo_professional_info {{/str}}</td>
+        <td>{{employment_contract_end_date}}</td>
+    </tr>
+    <tr>
+        <td>{{#str}} type_of_employment, block_cdo_professional_info {{/str}}</td>
+        <td>{{type_of_employment}}</td>
+    </tr>
+    <tr>
+        <td>{{#str}} current_position, block_cdo_professional_info {{/str}}</td>
+        <td>{{current_position}}</td>
+    </tr>
+    <tr>
+        <td>{{#str}} academic_degree, block_cdo_professional_info {{/str}}</td>
+        <td>{{academic_degree}}</td>
+    </tr>
+    <tr>
+        <td>{{#str}} academic_title, block_cdo_professional_info {{/str}}</td>
+        <td>{{academic_title}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>{{#str}} title_position_list, block_cdo_professional_info {{/str}}</h3>
+<hr />
+{{#positions_list}}
+    <table class="table table-striped table-sm text-break">
+        <tbody>
+        <tr>
+            <td>{{#str}} faculty, block_cdo_professional_info {{/str}}</td>
+            <td>{{faculty.name}}</td>
+        </tr>
+        <tr>
+            <td>{{#str}} department, block_cdo_professional_info {{/str}}</td>
+            <td>{{department.name}}</td>
+        </tr>
+        <tr>
+            <td>{{#str}} employment_contract_end_date, block_cdo_professional_info {{/str}}</td>
+            <td>{{employment_contract_end_date}}</td>
+        </tr>
+        <tr>
+            <td>{{#str}} type_of_employment, block_cdo_professional_info {{/str}}</td>
+            <td>{{type_of_employment}}</td>
+        </tr>
+        <tr>
+            <td>{{#str}} current_position, block_cdo_professional_info {{/str}}</td>
+            <td>{{current_position}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <hr />
+{{/positions_list}}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="admin/tool/cdo_config/db" VERSION="20181030" COMMENT="XMLDB file for Moodle tool/cdo_config"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../../../../lib/xmldb/xmldb.xsd"
+>
+    <TABLES>
+        <TABLE NAME="cdo_config" COMMENT="">
+            <FIELDS>
+                <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+                <FIELD NAME="name" TYPE="text" NOTNULL="true" SEQUENCE="false" COMMENT="Название запроса"/>
+                <FIELD NAME="description" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Описание запроса"/>
+                <FIELD NAME="method" TYPE="char" LENGTH="20" NOTNULL="true" SEQUENCE="false" COMMENT="Метод запроса"/>
+                <FIELD NAME="endpoint" TYPE="text" NOTNULL="true" SEQUENCE="false" UNSIGNED="true" COMMENT="Точка запроса"/>
+                <FIELD NAME="port" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT="Порт запроса"/>
+
+                <FIELD NAME="no_auth" TYPE="int" LENGTH="1" NOTNULL="false" SEQUENCE="false" COMMENT="Запрос без авторизации"/>
+                <FIELD NAME="auth_token" TYPE="char" LENGTH="1" NOTNULL="false" SEQUENCE="false" COMMENT="Авторизация по токену"/>
+                <FIELD NAME="login" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Логин для авторизации"/>
+                <FIELD NAME="password" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Пароль для авторизации"/>
+                <FIELD NAME="type_token" TYPE="char" LENGTH="255" NOTNULL="false" SEQUENCE="false" COMMENT="Тип токена для авторизации"/>
+                <FIELD NAME="token" TYPE="text" LENGTH="1000" NOTNULL="false" SEQUENCE="false" COMMENT="Токена для авторизации"/>
+
+                <FIELD NAME="code" TYPE="char" LENGTH="100" NOTNULL="true" SEQUENCE="false" UNSIGNED="true" COMMENT="Код для получения запроса"/>
+                <FIELD NAME="dto" TYPE="text" LENGTH="500" NOTNULL="true" SEQUENCE="false" COMMENT="Путь до ДТО класса обрабатывающего ответ запроса"/>
+
+                <FIELD NAME="headers" TYPE="text" LENGTH="2000" NOTNULL="false" SEQUENCE="false" COMMENT="Дополнительные заголовки"/>
+                <FIELD NAME="use_mock" TYPE="int" LENGTH="1" NOTNULL="false" SEQUENCE="false" COMMENT="Использовать тестовые данные"/>
+                <FIELD NAME="mock" TYPE="text" LENGTH="9999" NOTNULL="false" SEQUENCE="false" COMMENT="Тестовые данные"/>
+
+                <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+                <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
+            </FIELDS>
+            <KEYS>
+                <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+            </KEYS>
+            <INDEXES>
+                <INDEX NAME="code" UNIQUE="false" FIELDS="code"/>
+            </INDEXES>
+        </TABLE>
+    </TABLES>
+</XMLDB>

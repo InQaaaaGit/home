@@ -1,0 +1,69 @@
+<div class="cdo-notification-main">
+    <div class="cdo-notification-header">
+        <div class="cdo-notification-title">
+            <p class="cdo-notification-subtitle">
+                {{#str}}totalnotifications, block_cdo_notification, {{totalcount}}{{/str}}
+            </p>
+        </div>
+    </div>
+
+    {{#notifications.0}}
+        <div class="cdo-notification-content">
+            <div class="cdo-notification-section">
+
+                <div class="cdo-notification-grid">
+                    {{#notifications}}
+                        <div class="cdo-notification-card">
+                            <div class="cdo-notification-card-header">
+                                <h3>
+                                    <a href="/blocks/cdo_notification/notification.php?id={{notification-idx}}">
+                                        {{{header}}}
+                                    </a>
+                                </h3>
+                                <div class="cdo-notification-card-meta">
+                                    <span class="notification-date">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        {{{date}}}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="cdo-notification-card-body">
+                                <p>{{{short_body}}}</p>
+                            </div>
+                            <div class="cdo-notification-card-actions">
+                                <a href="/blocks/cdo_notification/notification.php?id={{id}}"
+                                   class="btn btn-sm btn-outline-primary">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                    {{#str}}viewdetails, block_cdo_notification{{/str}}
+                                </a>
+                            </div>
+                        </div>
+                        <hr>
+                    {{/notifications}}
+                </div>
+
+                {{#showpagination}}
+                <div class="cdo-notification-pagination">
+                    {{{pagination}}}
+                </div>
+                {{/showpagination}}
+
+            </div>
+        </div>
+    {{/notifications.0}}
+    {{^notifications.0}}
+        <div class="cdo-notification-empty">
+            <div class="text-center py-5">
+                <i class="fa fa-bell-slash fa-4x text-muted mb-4"></i>
+                <h3>{{#str}}nonotifications, block_cdo_notification{{/str}}</h3>
+                <p class="text-muted">
+                    {{#str}}nonotificationsdesc, block_cdo_notification{{/str}}
+                </p>
+            </div>
+        </div>
+    {{/notifications.0}}
+</div>
+
+<style>
+/* ... (сюда можно вставить CSS из старого файла) ... */
+</style> 

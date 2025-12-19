@@ -1,0 +1,52 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">{{#str}} discipline, local_cdo_academic_progress {{/str}}</th>
+        <th scope="col">{{#str}} date_control, local_cdo_academic_progress {{/str}}</th>
+        <th scope="col">{{#str}} type_control, local_cdo_academic_progress {{/str}}</th>
+        <th scope="col">{{#str}} mark, local_cdo_academic_progress {{/str}}</th>
+        <th scope="col">{{#str}} retake, local_cdo_academic_progress {{/str}}</th>
+        <th scope="col">{{#str}} teacher, local_cdo_academic_progress {{/str}}</th>
+        {{#use_brs}}
+            <th scope="col">{{#str}} grade_semester, local_cdo_academic_progress {{/str}}</th>
+            <th scope="col">{{#str}} grade_control, local_cdo_academic_progress {{/str}}</th>
+            <th scope="col">{{#str}} grade_all, local_cdo_academic_progress {{/str}}</th>
+        {{/use_brs}}
+        {{#have_course_works}}
+            <th scope="col">{{#str}} course_work, local_cdo_academic_progress {{/str}}</th>
+            <th scope="col">{{#str}} semester, local_cdo_academic_progress {{/str}}</th>
+        {{/have_course_works}}
+        <th scope="col">{{#str}} teacher, local_cdo_academic_progress {{/str}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#attestation}}
+        <tr>
+            <td>{{discipline.name}}</td>
+            <td>{{date}}</td>
+            <td>{{type_control}}</td>
+            <td>{{mark}}</td>
+            <td>
+                {{#retake}}
+                    {{#pix}} t/check, core {{/pix}}
+                {{/retake}}
+            </td>
+            <td>
+                {{#teacher}}
+                    {{name}} <br/>
+                {{/teacher}}
+            </td>
+            {{#use_brs}}
+                <td>{{grade_semester}}</td>
+                <td>{{grade_control}}</td>
+                <td>{{grade_all}}</td>
+            {{/use_brs}}
+            {{#have_course_works}}
+                <td>{{course_work}}</td>
+                <td>{{semester}}</td>
+            {{/have_course_works}}
+            <td>link</td>
+        </tr>
+    {{/attestation}}
+    </tbody>
+</table>

@@ -1,0 +1,27 @@
+<ul class="nav nav-tabs" id="academic_progress_gradebook" role="tablist">
+    {{#progress}}
+        {{#attestation_not_empty}}
+            <li class="nav-item" role="presentation">
+                <a
+                        class="nav-link {{active}}"
+                        id="{{order}}-gradebook"
+                        data-toggle="tab"
+                        href="#nav-gradebook-{{order}}" role="tab"
+                        aria-controls="{{order}}"
+                        aria-selected="true">
+                    {{gradebook}}
+                </a>
+            </li>
+        {{/attestation_not_empty}}
+    {{/progress}}
+</ul>
+<div class="tab-content" id="nav_tab_content_academic_progress_gradebook">
+    {{#progress}}
+        <div class="tab-pane fade {{show}} {{active}}" id="nav-gradebook-{{order}}" role="tabpanel"
+             aria-labelledby="ap1{{order}}">
+            {{#attestation_not_empty}}
+                {{> local_cdo_mto/components/tab_academic_progress}}
+            {{/attestation_not_empty}}
+        </div>
+    {{/progress}}
+</div>

@@ -1,0 +1,64 @@
+{
+  "version": "1.0.3",
+  "timestamp": "2023-09-14T20:01:02+03:00",
+  "actor": {
+    "objectType": "Agent",
+    "account": {
+      "homePage": "https://my.2035.university",
+      "name": "11111"
+    }
+  },
+  "verb": {
+    "id": "http://activitystrea.ms/schema/1.0/author",
+    "display": {
+      "ru-RU": "Будет создан"
+    }
+  },
+  "object": {
+    "id": "https://PROVIDER.ru/courses/1/theory/modules/1/themes/1/activities/1",
+    "objectType": "Activity",
+    "definition": {
+      "name": {
+        "ru-RU": "Вхождение Урана в Козерога"
+      },
+      "description": {
+        "ru-RU": "Захватывающее видео"
+      },
+      "type": "http://activitystrea.ms/schema/1.0/video",
+      "extensions": {
+        "https://id.2035.university/xapi/extension/required": true,
+        "https://id.2035.university/xapi/extension/video_type": "video",
+        "https://id.2035.university/xapi/extension/webinar_link": "www.example.com",
+        "https://id.2035.university/xapi/extension/webinar_datetime": "2023-09-15T10:00:00+03:00",
+        "https://id.2035.university/xapi/extension/lectures_minutes_astronomy": 45,
+        "https://id.2035.university/xapi/extension/workshops_minutes_astronomy": 45,
+        "https://id.2035.university/xapi/extension/independent_work_minutes_astronomy": 45,
+        "https://id.2035.university/xapi/extension/lectures_hours_academic": 1,
+        "https://id.2035.university/xapi/extension/workshops_hours_academic": 1,
+        "https://id.2035.university/xapi/extension/independent_work_hours_academic": 1
+      }
+    }
+  },
+  "context": {
+    "contextActivities": {
+      "parent": [
+        {
+          "id": "https://PROVIDER.ru/courses/1/theory/modules/1/themes/1",
+          "objectType": "Activity",
+          "definition": {
+            "type": "http://adlnet.gov/expapi/activities/theme"
+          }
+        }
+      ]
+    },
+    "extensions": {
+      "https://w3id.org/xapi/video/extensions/length": "PT1H35M",
+      "https://api.2035.university/project": "БАС",
+      "https://api.2035.university/parent_course_id": 12345,
+      "https://api.2035.university/flow_id": 234,
+      "https://api.2035.university/block_num": 1,
+      "https://api.2035.university/module_id": 23,
+      "https://api.2035.university/theme_id": 123
+    }
+  }
+}

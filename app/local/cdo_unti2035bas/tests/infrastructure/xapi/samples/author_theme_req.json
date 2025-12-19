@@ -1,0 +1,54 @@
+{
+  "version": "1.0.3",
+  "timestamp": "2023-09-14T20:01:02+03:00",
+  "actor": {
+    "objectType": "Agent",
+    "account": {
+      "homePage": "https://my.2035.university",
+      "name": "11111"
+    }
+  },
+  "verb": {
+    "id": "http://activitystrea.ms/schema/1.0/author",
+    "display": {
+      "ru-RU": "Будет создан"
+    }
+  },
+  "object": {
+    "id": "https://PROVIDER.ru/courses/1/theory/modules/1/themes/1",
+    "objectType": "Activity",
+    "definition": {
+      "name": {
+        "ru-RU": "Собственные числа гамильтониана как предмет изучения нумерологии"
+      },
+      "description": {
+        "ru-RU": "Повтор основ квантовой механики. Уравнение Шрёдингера и его кот."
+      },
+      "type": "http://adlnet.gov/expapi/activities/theme",
+      "extensions": {
+        "http://id.tincanapi.com/extension/position": 1
+      }
+    }
+  },
+  "context": {
+    "contextActivities": {
+      "parent": [
+        {
+          "id": "https://PROVIDER.ru/courses/1/theory/modules/1",
+          "objectType": "Activity",
+          "definition": {
+            "type": "https://id.2035.university/xapi/activities/module"
+          }
+        }
+      ]
+    },
+    "extensions": {
+      "https://api.2035.university/project": "БАС",
+      "https://api.2035.university/parent_course_id": 12345,
+      "https://api.2035.university/flow_id": 234,
+      "https://api.2035.university/block_num": 1,
+      "https://api.2035.university/theme_id": 123,
+      "https://api.2035.university/module_id": 23
+    }
+  }
+}

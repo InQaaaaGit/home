@@ -1,0 +1,79 @@
+<table id="discipline_{{ i }}" class="table stylish-table table-files table-bordered w-100">
+    <thead>
+    <tr>
+        <td>Тип</td>
+        <td>Дисциплина</td>
+        <td>Файлы</td>
+        <td>Комментарий</td>
+        {% if not isAuditor %}
+            <td></td>
+        {% endif %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in items %}
+        <tr>
+            <td data-type="type">{{ item.type }}</td>
+            <td data-type="discipline">{{ item.discipline_name }}</td>
+            <td data-type="link_file">
+                <div class="d-flex flex-column">
+                    {% for item_file in item.files %}
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            {% if item_file.section.id == keysec %}
+                                <a href="/blocks/files_learning_plan/get_file.php?file_id={{ item_file.guidfile }}"
+                                   class="link-downloader mr-2"
+                                   data-guidfile="{{ item_file.guidfile }}"
+                                   target="_blank"
+                                >{{ item_file.filename }}</a>
+                                {% if not isAuditor %}
+                                    <a href="javascript:;"
+                                       class="delete-item-disc mb-2"
+                                       id="{{ item.discipline_id }}"
+                                       data-guidfile="{{ item_file.guidfile }}"
+                                       title="Удалить файл"
+                                    ><i class="fas fa-times"></i></a>
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </td>
+            <td>
+                <div class="item-notes"
+                     data-type="notes"
+                     data-discipline_id="{{ item.discipline_id }}"
+                >
+                    {{ item.notes }}
+                </div>
+            </td>
+            {% if not isAuditor %}
+                <td data-type="link_file" class="text-center">
+                    <div class="d-flex justify-content-around">
+                        <a href="javascript:;"
+                           class="edit-notes-disc mr-1"
+                           data-toggle="modal"
+                           data-target="#modal_edit_notes"
+                           title="Редактировать комментарий"
+                           data-discipline_id="{{ item.discipline_id }}"
+                           data-section="{{ keysec }}"
+                           data-section_name="{{ section }}"
+                        >
+                            <i class="far fa-edit"></i>
+                        </a>
+
+                        <a href="javascript:;"
+                           class="link_add_file"
+                           data-toggle="modal"
+                           data-target="#modal_add_file"
+                           title="Загрузить файл"
+                           data-discipline_id="{{ item.discipline_id }}"
+                           data-section="{{ keysec }}"
+                           data-section_name="{{ section }}"
+                        ><i class="fas fa-upload"></i></a>
+                    </div>
+                </td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
